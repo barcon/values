@@ -16,11 +16,13 @@ namespace values
 	static const Type value_scalar3D_function		= 9;
 	static const Type value_scalar3D_congruent		= 10;
 	static const Type value_scalar3D_interpolation	= 11;
-	static const Type value_vector3D				= 12;
-	static const Type value_vector3D_interpolation	= 13;
-	static const Type value_vector3D_congruent		= 14;
-	static const Type value_matrix3D_interpolation	= 15;
-	static const Type value_matrix3D_congruent		= 16;
+	static const Type value_vector					= 12;
+	static const Type value_vector3D				= 13;
+	static const Type value_vector3D_interpolation	= 14;
+	static const Type value_vector3D_congruent		= 15;
+	static const Type value_matrix					= 16;
+	static const Type value_matrix3D_interpolation	= 17;
+	static const Type value_matrix3D_congruent		= 18;
 
 	class IValue
 	{
@@ -87,6 +89,14 @@ namespace values
 		virtual Scalar GetValue(const Vector& point) const = 0;
 	};
 
+	class IVector : public IValue
+	{
+	public:
+		virtual ~IVector() = default;
+
+		virtual Vector GetValue() const = 0;
+	};
+
 	class IVector3D : public IValue
 	{
 	public:
@@ -94,6 +104,14 @@ namespace values
 
 		virtual Vector GetValue(Scalar x, Scalar y, Scalar z) const = 0;
 		virtual Vector GetValue(const Vector& point) const = 0;
+	};
+
+	class IMatrix : public IValue
+	{
+	public:
+		virtual ~IMatrix() = default;
+
+		virtual Matrix GetValue() const = 0;
 	};
 
 	class IMatrix3D : public IValue
@@ -111,7 +129,9 @@ namespace values
 	using IScalar1DPtr = std::shared_ptr<IScalar1D>;
 	using IScalar2DPtr = std::shared_ptr<IScalar2D>;
 	using IScalar3DPtr = std::shared_ptr<IScalar3D>;
+	using IVectorPtr = std::shared_ptr<IVector>;
 	using IVector3DPtr = std::shared_ptr<IVector3D>;
+	using IMatrixPtr = std::shared_ptr<IMatrix>;
 	using IMatrix3DPtr = std::shared_ptr<IMatrix3D>;
 	using IStringPtr = std::shared_ptr<IString>;
 
