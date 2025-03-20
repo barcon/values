@@ -9,13 +9,13 @@ namespace values
 	static const Type value_string					= 2;
 	static const Type value_scalar					= 3;
 	static const Type value_scalar1D				= 4;
-	static const Type value_scalar2D				= 5;
-	static const Type value_scalar3D				= 6;
-	static const Type value_scalar1D_function		= 7;
-	static const Type value_scalar2D_function		= 8;
+	static const Type value_scalar1D_function		= 5;
+	static const Type value_scalar2D				= 6;
+	static const Type value_scalar2D_function		= 7;
+	static const Type value_scalar3D				= 8;
 	static const Type value_scalar3D_function		= 9;
-	static const Type value_scalar3D_congruent		= 10;
-	static const Type value_scalar3D_interpolation	= 11;
+	static const Type value_scalar3D_interpolation	= 10;
+	static const Type value_scalar3D_congruent		= 11;
 	static const Type value_vector					= 12;
 	static const Type value_vector3D				= 13;
 	static const Type value_vector3D_interpolation	= 14;
@@ -23,6 +23,19 @@ namespace values
 	static const Type value_matrix					= 16;
 	static const Type value_matrix3D_interpolation	= 17;
 	static const Type value_matrix3D_congruent		= 18;
+
+	/*
+	IBoolPtr ConvertToBool(IValuePtr value);
+	IStringPtr ConvertToString(IValuePtr value);
+	IScalarPtr ConvertToScalar(IValuePtr value);
+	IScalar1DPtr ConvertToScalar1D(IValuePtr value);
+	IScalar2DPtr ConvertToScalar2D(IValuePtr value);
+	IScalar3DPtr ConvertToScalar3D(IValuePtr value);
+	IVectorPtr ConvertToVector(IValuePtr value);
+	IVector3DPtr ConvertToVector3D(IValuePtr value);
+	IMatrixPtr ConvertToMatrix(IValuePtr value);
+	IMatrix3DPtr ConvertToMatrix3D(IValuePtr value);
+	*/
 
 	class IValue
 	{

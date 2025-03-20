@@ -91,6 +91,7 @@
     <ClInclude Include="..\src\values.hpp" />
     <ClInclude Include="..\src\values_base.hpp" />
     <ClInclude Include="..\src\values_bool.hpp" />
+    <ClInclude Include="..\src\values_matrix.hpp" />
     <ClInclude Include="..\src\values_matrix_interpolation.hpp" />
     <ClInclude Include="..\src\values_scalar.hpp" />
     <ClInclude Include="..\src\values_scalar_function.hpp" />

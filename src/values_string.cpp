@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IStringPtr CastToString(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IString>(value);
+    }
     ValueStringPtr ValueString::ValueString::Create()
     {
         class MakeSharedEnabler : public ValueString

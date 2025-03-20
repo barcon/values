@@ -2,6 +2,63 @@
 
 namespace values
 {
+    ValueVectorPtr CreateValueVector(const Vector& value)
+    {
+        auto res = ValueVector::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
+    ValueVectorPtr CreateValueVector(const Vector& value, String name, String key)
+    {
+        auto res = ValueVector::Create();
+
+        res->SetName(name);
+        res->SetKey(key);
+        res->SetValue(value);
+
+        return res;
+    }
+    ValueVectorPtr ValueVector::ValueVector::Create()
+    {
+        class MakeSharedEnabler : public ValueVector
+        {
+        };
+
+        auto res = std::make_shared<MakeSharedEnabler>();
+
+        return res;
+    }
+    Type ValueVector::GetType() const
+    {
+        return type_;
+    }
+    const String& ValueVector::GetName() const
+    {
+        return name_;
+    }
+    const String& ValueVector::GetKey() const
+    {
+        return key_;
+    }
+    Vector ValueVector::GetValue() const
+    {
+        return value_;
+    }
+    void ValueVector::SetName(const String& name)
+    {
+        name_ = name;
+    }
+    void ValueVector::SetKey(const String& key)
+    {
+        key_ = key;
+    }
+    void ValueVector::SetValue(const Vector& value)
+    {
+        value_ = value;
+    }
+
     ValueVector3DPtr CreateValueVector3D(const Vector& value)
     {
         auto res = ValueVector3D::Create();

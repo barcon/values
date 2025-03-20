@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IBoolPtr CastToBool(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IBool>(value);
+    }
     ValueBoolPtr ValueBool::ValueBool::Create()
     {
         class MakeSharedEnabler : public ValueBool
