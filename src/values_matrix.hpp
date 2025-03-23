@@ -40,6 +40,78 @@ namespace values
 		Type type_{ value_matrix };
 	};
 
+	class ValueMatrix1D;
+	using ValueMatrix1DPtr = std::shared_ptr<ValueMatrix1D>;
+	using ConstValueMatrix1DPtr = std::shared_ptr< const ValueMatrix1D >;
+
+	ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value);
+	ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value, String name, String key);
+
+	IMatrix1DPtr CastToMatrix1D(IValuePtr value);
+
+	class ValueMatrix1D : public IMatrix1D
+	{
+	public:
+		virtual ~ValueMatrix1D() = default;
+
+		static ValueMatrix1DPtr Create();
+
+		Type GetType() const override;
+		const String& GetName() const override;
+		const String& GetKey() const override;
+		Matrix GetValue(Scalar x) const override;
+		Matrix GetValue(const Vector& point) const override;
+
+		void SetName(const String& name) override;
+		void SetKey(const String& key) override;
+		void SetValue(const Matrix& value);
+
+	protected:
+		ValueMatrix1D() = default;
+
+		String name_{};
+		String key_{};
+		Matrix value_;
+
+		Type type_{ value_matrix1D };
+	};
+
+	class ValueMatrix2D;
+	using ValueMatrix2DPtr = std::shared_ptr<ValueMatrix2D>;
+	using ConstValueMatrix2DPtr = std::shared_ptr< const ValueMatrix2D >;
+
+	ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value);
+	ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value, String name, String key);
+
+	IMatrix2DPtr CastToMatrix2D(IValuePtr value);
+
+	class ValueMatrix2D : public IMatrix2D
+	{
+	public:
+		virtual ~ValueMatrix2D() = default;
+
+		static ValueMatrix2DPtr Create();
+
+		Type GetType() const override;
+		const String& GetName() const override;
+		const String& GetKey() const override;
+		Matrix GetValue(Scalar x, Scalar y) const override;
+		Matrix GetValue(const Vector& point) const override;
+
+		void SetName(const String& name) override;
+		void SetKey(const String& key) override;
+		void SetValue(const Matrix& value);
+
+	protected:
+		ValueMatrix2D() = default;
+
+		String name_{};
+		String key_{};
+		Matrix value_;
+
+		Type type_{ value_matrix2D };
+	};
+
 	class ValueMatrix3D;
 	using ValueMatrix3DPtr = std::shared_ptr<ValueMatrix3D>;
 	using ConstValueMatrix3DPtr = std::shared_ptr< const ValueMatrix3D >;
