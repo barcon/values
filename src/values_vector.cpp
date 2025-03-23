@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IVectorPtr CastToVector(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IVector>(value);
+    }
     ValueVectorPtr ValueVector::ValueVector::Create()
     {
         class MakeSharedEnabler : public ValueVector
@@ -76,6 +80,10 @@ namespace values
         res->SetValue(value);
 
         return res;
+    }
+    IVector3DPtr CastToVector3d(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IVector3D>(value);
     }
     ValueVector3DPtr ValueVector3D::ValueVector3D::Create()
     {

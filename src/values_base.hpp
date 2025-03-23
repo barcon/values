@@ -21,21 +21,9 @@ namespace values
 	static const Type value_vector3D_interpolation	= 14;
 	static const Type value_vector3D_congruent		= 15;
 	static const Type value_matrix					= 16;
-	static const Type value_matrix3D_interpolation	= 17;
-	static const Type value_matrix3D_congruent		= 18;
-
-	/*
-	IBoolPtr ConvertToBool(IValuePtr value);
-	IStringPtr ConvertToString(IValuePtr value);
-	IScalarPtr ConvertToScalar(IValuePtr value);
-	IScalar1DPtr ConvertToScalar1D(IValuePtr value);
-	IScalar2DPtr ConvertToScalar2D(IValuePtr value);
-	IScalar3DPtr ConvertToScalar3D(IValuePtr value);
-	IVectorPtr ConvertToVector(IValuePtr value);
-	IVector3DPtr ConvertToVector3D(IValuePtr value);
-	IMatrixPtr ConvertToMatrix(IValuePtr value);
-	IMatrix3DPtr ConvertToMatrix3D(IValuePtr value);
-	*/
+	static const Type value_matrix3D				= 17;
+	static const Type value_matrix3D_interpolation	= 18;
+	static const Type value_matrix3D_congruent		= 19;
 
 	class IValue
 	{

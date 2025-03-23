@@ -12,6 +12,8 @@ namespace values
 	ValueVectorPtr CreateValueVector(const Vector& value);
 	ValueVectorPtr CreateValueVector(const Vector& value, String name, String key);
 
+	IVectorPtr CastToVector(IValuePtr value);
+
 	class ValueVector : public IVector
 	{
 	public:
@@ -44,6 +46,8 @@ namespace values
 
 	ValueVector3DPtr CreateValueVector3D(const Vector& value);
 	ValueVector3DPtr CreateValueVector3D(const Vector& value, String name, String key);
+
+	IVector3DPtr CastToVector3d(IValuePtr value);
 
 	class ValueVector3D : public IVector3D
 	{

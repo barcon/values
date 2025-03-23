@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IScalarPtr CastToScalar(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IScalar>(value);
+    }
     ValueScalarPtr ValueScalar::ValueScalar::Create()
     {
         class MakeSharedEnabler : public ValueScalar
@@ -76,6 +80,10 @@ namespace values
         res->SetValue(value);
 
         return res;
+    }
+    IScalar1DPtr CastToScalar1D(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IScalar1D>(value);
     }
     ValueScalar1DPtr ValueScalar1D::ValueScalar1D::Create()
     {
@@ -138,6 +146,10 @@ namespace values
 
         return res;
     }
+    IScalar2DPtr CastToScalar2D(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IScalar2D>(value);
+    }
     ValueScalar2DPtr ValueScalar2D::ValueScalar2D::Create()
     {
         class MakeSharedEnabler : public ValueScalar2D
@@ -198,6 +210,10 @@ namespace values
         res->SetValue(value);
 
         return res;
+    }
+    IScalar3DPtr CastToScalar3D(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IScalar3D>(value);
     }
     ValueScalar3DPtr ValueScalar3D::ValueScalar3D::Create()
     {

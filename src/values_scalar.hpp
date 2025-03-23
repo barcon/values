@@ -12,6 +12,8 @@ namespace values
 	ValueScalarPtr CreateValueScalar(Scalar value);
 	ValueScalarPtr CreateValueScalar(Scalar value, String name, String key);
 
+	IScalarPtr CastToScalar(IValuePtr value);
+
 	class ValueScalar : public IScalar
 	{
 	public:
@@ -44,6 +46,8 @@ namespace values
 
 	ValueScalar1DPtr CreateValueScalar1D(Scalar value);
 	ValueScalar1DPtr CreateValueScalar1D(Scalar value, String name, String key);
+
+	IScalar1DPtr CastToScalar1D(IValuePtr value);
 
 	class ValueScalar1D : public IScalar1D
 	{
@@ -79,6 +83,8 @@ namespace values
 	ValueScalar2DPtr CreateValueScalar2D(Scalar value);
 	ValueScalar2DPtr CreateValueScalar2D(Scalar value, String name, String key);
 
+	IScalar2DPtr CastToScalar2D(IValuePtr value);
+
 	class ValueScalar2D : public IScalar2D
 	{
 	public:
@@ -112,6 +118,8 @@ namespace values
 
 	ValueScalar3DPtr CreateValueScalar3D(Scalar value);
 	ValueScalar3DPtr CreateValueScalar3D(Scalar value, String name, String key);
+
+	IScalar3DPtr CastToScalar3D(IValuePtr value);
 
 	class ValueScalar3D : public IScalar3D
 	{

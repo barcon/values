@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IMatrix3DPtr CastToMatrix3DInterpolation(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IMatrix3D>(value);
+    }
     ValueMatrix3DInterpolationPtr ValueMatrix3DInterpolation::Create()
     {
         class MakeSharedEnabler : public ValueMatrix3DInterpolation

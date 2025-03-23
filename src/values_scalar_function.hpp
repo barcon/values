@@ -12,6 +12,8 @@ namespace values
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Scalar (*function)(Scalar));
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Scalar(*function)(Scalar), String name, String key);
 
+	IScalar1DPtr CastToScalar1DFunction(IValuePtr value);
+
 	class ValueScalar1DFunction : public IScalar1D
 	{
 	public:
@@ -46,6 +48,8 @@ namespace values
 	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Scalar(*function)(Scalar, Scalar));
 	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Scalar(*function)(Scalar, Scalar), String name, String key);
 
+	IScalar2DPtr CastToScalar2DFunction(IValuePtr value);
+
 	class ValueScalar2DFunction : public IScalar2D
 	{
 	public:
@@ -79,6 +83,8 @@ namespace values
 
 	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Scalar(*function)(Scalar, Scalar, Scalar));
 	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Scalar(*function)(Scalar, Scalar, Scalar), String name, String key);
+
+	IScalar3DPtr CastToScalar3DFunction(IValuePtr value);
 
 	class ValueScalar3DFunction : public IScalar3D
 	{

@@ -12,6 +12,8 @@ namespace values
 	ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType);
 	ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType, String name, String key);
 
+	IMatrix3DPtr CastToMatrix3DInterpolation(IValuePtr value);
+
 	class ValueMatrix3DInterpolation : public IMatrix3D
 	{
 	public:

@@ -12,6 +12,8 @@ namespace values
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value);
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key);
 
+	IMatrixPtr CastToMatrix(IValuePtr value);
+
 	class ValueMatrix : public IMatrix
 	{
 	public:
@@ -45,6 +47,8 @@ namespace values
 	ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value);
 	ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value, String name, String key);
 
+	IMatrix3DPtr CastToMatrix3D(IValuePtr value);
+
 	class ValueMatrix3D : public IMatrix3D
 	{
 	public:
@@ -56,7 +60,7 @@ namespace values
 		const String& GetName() const override;
 		const String& GetKey() const override;
 		Matrix GetValue(Scalar x, Scalar y, Scalar z) const override;
-		Matrix GetValue(const Matrix& point) const override;
+		Matrix GetValue(const Vector& point) const override;
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;

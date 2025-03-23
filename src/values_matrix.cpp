@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IMatrixPtr CastToMatrix(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IMatrix>(value);
+    }
     ValueMatrixPtr ValueMatrix::ValueMatrix::Create()
     {
         class MakeSharedEnabler : public ValueMatrix
@@ -77,6 +81,10 @@ namespace values
 
         return res;
     }
+    IMatrix3DPtr CastToMatrix3D(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IMatrix3D>(value);
+    }
     ValueMatrix3DPtr ValueMatrix3D::ValueMatrix3D::Create()
     {
         class MakeSharedEnabler : public ValueMatrix3D
@@ -103,7 +111,7 @@ namespace values
     {
         return value_;
     }
-    Matrix ValueMatrix3D::GetValue(const Matrix& point) const
+    Matrix ValueMatrix3D::GetValue(const Vector& point) const
     {
         return value_;
     }

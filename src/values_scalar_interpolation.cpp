@@ -20,6 +20,10 @@ namespace values
 
         return res;
     }
+    IScalar3DPtr CastToScalar3DInterpolation(IValuePtr value)
+    {
+        return std::dynamic_pointer_cast<IScalar3D>(value);
+    }
     ValueScalar3DInterpolationPtr ValueScalar3DInterpolation::Create()
     {
         class MakeSharedEnabler : public ValueScalar3DInterpolation
