@@ -22,6 +22,11 @@ namespace values
     }
     IStringPtr CastToString(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_string)
         {
             return nullptr;

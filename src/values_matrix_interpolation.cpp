@@ -22,6 +22,11 @@ namespace values
     }
     IMatrix3DPtr CastToMatrix3DInterpolation(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_matrix3D_interpolation)
         {
             return nullptr;

@@ -22,6 +22,11 @@ namespace values
     }
     IMatrixPtr CastToMatrix(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_matrix)
         {
             return nullptr;
@@ -88,6 +93,11 @@ namespace values
     }
     IMatrix1DPtr CastToMatrix1D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_matrix1D)
         {
             return nullptr;
@@ -158,6 +168,11 @@ namespace values
     }
     IMatrix2DPtr CastToMatrix2D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_matrix2D)
         {
             return nullptr;
@@ -228,6 +243,11 @@ namespace values
     }
     IMatrix3DPtr CastToMatrix3D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_matrix3D)
         {
             return nullptr;

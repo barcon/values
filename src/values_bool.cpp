@@ -22,6 +22,11 @@ namespace values
     }
     IBoolPtr CastToBool(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_bool)
         {
             return nullptr;

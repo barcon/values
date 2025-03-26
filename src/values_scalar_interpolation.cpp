@@ -22,6 +22,11 @@ namespace values
     }
     IScalar3DPtr CastToScalar3DInterpolation(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_scalar3D_interpolation)
         {
             return nullptr;

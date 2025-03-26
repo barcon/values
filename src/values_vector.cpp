@@ -22,6 +22,11 @@ namespace values
     }
     IVectorPtr CastToVector(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_vector)
         {
             return nullptr;
@@ -88,6 +93,16 @@ namespace values
     }
     IVector1DPtr CastToVector1D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (value->GetType() != value_vector1D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IVector1D>(value);
     }
     ValueVector1DPtr ValueVector1D::ValueVector1D::Create()
@@ -153,6 +168,16 @@ namespace values
     }
     IVector2DPtr CastToVector2D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (value->GetType() != value_vector2D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IVector2D>(value);
     }
     ValueVector2DPtr ValueVector2D::ValueVector2D::Create()
@@ -218,6 +243,16 @@ namespace values
     }
     IVector3DPtr CastToVector3D(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (value->GetType() != value_vector3D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IVector3D>(value);
     }
     ValueVector3DPtr ValueVector3D::ValueVector3D::Create()

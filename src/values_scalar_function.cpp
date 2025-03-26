@@ -22,6 +22,11 @@ namespace values
     }
     IScalar1DPtr CastToScalar1DFunction(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_scalar1D_function)
         {
             return nullptr;
@@ -92,6 +97,11 @@ namespace values
     }
     IScalar2DPtr CastToScalar2DFunction(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_scalar2D_function)
         {
             return nullptr;
@@ -162,6 +172,11 @@ namespace values
     }
     IScalar3DPtr CastToScalar3DFunction(IValuePtr value)
     {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
         if (value->GetType() != value_scalar3D_function)
         {
             return nullptr;
