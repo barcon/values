@@ -22,6 +22,11 @@ namespace values
     }
     IMatrix3DPtr CastToMatrix3DInterpolation(IValuePtr value)
     {
+        if (value->GetType() != value_matrix3D_interpolation)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IMatrix3D>(value);
     }
     ValueMatrix3DInterpolationPtr ValueMatrix3DInterpolation::Create()

@@ -22,6 +22,11 @@ namespace values
     }
     IMatrixPtr CastToMatrix(IValuePtr value)
     {
+        if (value->GetType() != value_matrix)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IMatrix>(value);
     }
     ValueMatrixPtr ValueMatrix::ValueMatrix::Create()
@@ -83,6 +88,11 @@ namespace values
     }
     IMatrix1DPtr CastToMatrix1D(IValuePtr value)
     {
+        if (value->GetType() != value_matrix1D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IMatrix1D>(value);
     }
     ValueMatrix1DPtr ValueMatrix1D::ValueMatrix1D::Create()
@@ -148,6 +158,11 @@ namespace values
     }
     IMatrix2DPtr CastToMatrix2D(IValuePtr value)
     {
+        if (value->GetType() != value_matrix2D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IMatrix2D>(value);
     }
     ValueMatrix2DPtr ValueMatrix2D::ValueMatrix2D::Create()
@@ -213,6 +228,11 @@ namespace values
     }
     IMatrix3DPtr CastToMatrix3D(IValuePtr value)
     {
+        if (value->GetType() != value_matrix3D)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IMatrix3D>(value);
     }
     ValueMatrix3DPtr ValueMatrix3D::ValueMatrix3D::Create()

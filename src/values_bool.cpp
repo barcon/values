@@ -22,6 +22,11 @@ namespace values
     }
     IBoolPtr CastToBool(IValuePtr value)
     {
+        if (value->GetType() != value_bool)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IBool>(value);
     }
     ValueBoolPtr ValueBool::ValueBool::Create()

@@ -22,6 +22,11 @@ namespace values
     }
     IStringPtr CastToString(IValuePtr value)
     {
+        if (value->GetType() != value_string)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IString>(value);
     }
     ValueStringPtr ValueString::ValueString::Create()

@@ -22,6 +22,11 @@ namespace values
     }
     IScalar1DPtr CastToScalar1DFunction(IValuePtr value)
     {
+        if (value->GetType() != value_scalar1D_function)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IScalar1D>(value);
     }
     ValueScalar1DFunctionPtr ValueScalar1DFunction::Create()
@@ -87,6 +92,11 @@ namespace values
     }
     IScalar2DPtr CastToScalar2DFunction(IValuePtr value)
     {
+        if (value->GetType() != value_scalar2D_function)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IScalar2D>(value);
     }
     ValueScalar2DFunctionPtr ValueScalar2DFunction::Create()
@@ -152,6 +162,11 @@ namespace values
     }
     IScalar3DPtr CastToScalar3DFunction(IValuePtr value)
     {
+        if (value->GetType() != value_scalar3D_function)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IScalar3D>(value);
     }
     ValueScalar3DFunctionPtr ValueScalar3DFunction::Create()

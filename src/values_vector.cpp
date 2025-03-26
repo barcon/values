@@ -22,6 +22,11 @@ namespace values
     }
     IVectorPtr CastToVector(IValuePtr value)
     {
+        if (value->GetType() != value_vector)
+        {
+            return nullptr;
+        }
+
         return std::dynamic_pointer_cast<IVector>(value);
     }
     ValueVectorPtr ValueVector::ValueVector::Create()
