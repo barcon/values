@@ -8,9 +8,9 @@
 #include <memory>
 #include <unordered_map>
 
-using Function_Value_D_D = double(*)(double);
-using Function_Value_D_DD = double(*)(double, double);
-using Function_Value_D_DDD = double(*)(double, double, double);
+using Function_Value_D_D = double (*)(double);
+using Function_Value_D_DD = double (*)(double, double);
+using Function_Value_D_DDD = double (*)(double, double, double);
 
 namespace values
 {
@@ -29,7 +29,6 @@ namespace values
 	using Status = long long int;
 
 	const String valuesLogger = "VALUES";
-
 } // namespace values
 
 #endif /* VALUES_TYPES_HPP_*/

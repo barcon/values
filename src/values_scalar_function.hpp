@@ -9,8 +9,8 @@ namespace values
 	using ValueScalar1DFunctionPtr = std::shared_ptr<ValueScalar1DFunction>;
 	using ConstValueScalar1DFunctionPtr = std::shared_ptr< const ValueScalar1DFunction >;
 
-	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Value_D_D function);
-	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Value_D_D function, String name, String key);
+	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Value_D_D function_Value_D_D);
+	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Value_D_D function_Value_D_D, String name, String key);
 
 	IScalar1DPtr CastToScalar1DFunction(IValuePtr value);
 
@@ -29,14 +29,14 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetFunction(Function_Value_D_D function);
+		void SetFunction(Function_Value_D_D function_Value_D_D);
 
 	protected:
 		ValueScalar1DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Function_Value_D_D function_{ nullptr };
+		Function_Value_D_D function_ { nullptr };
 
 		Type type_{ value_scalar1D_function };
 	};
@@ -45,8 +45,8 @@ namespace values
 	using ValueScalar2DFunctionPtr = std::shared_ptr<ValueScalar2DFunction>;
 	using ConstValueScalar2DFunctionPtr = std::shared_ptr<const ValueScalar2DFunction>;
 
-	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Value_D_DD function);
-	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Value_D_DD function, String name, String key);
+	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Value_D_D function_Value_D_DD);
+	ValueScalar2DFunctionPtr CreateValueScalar2DFunctionTest(Function_Value_D_D function_Value_D_DD, String name, String key);
 
 	IScalar2DPtr CastToScalar2DFunction(IValuePtr value);
 
@@ -65,7 +65,7 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetFunction(Function_Value_D_DD function);
+		void SetFunction(Function_Value_D_DD function_Value_D_DD);
 
 	protected:
 		ValueScalar2DFunction() = default;
@@ -81,8 +81,8 @@ namespace values
 	using ValueScalar3DFunctionPtr = std::shared_ptr<ValueScalar3DFunction>;
 	using ConstValueScalar3DFunctionPtr = std::shared_ptr< const ValueScalar3DFunction >;
 
-	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Value_D_DDD function);
-	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Value_D_DDD function, String name, String key);
+	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Value_D_DDD function_Value_D_DDD);
+	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Value_D_DDD function_Value_D_DDD, String name, String key);
 
 	IScalar3DPtr CastToScalar3DFunction(IValuePtr value);
 
@@ -101,7 +101,7 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetFunction(Function_Value_D_DDD function);
+		void SetFunction(Function_Value_D_DDD function_Value_D_DDD);
 
 	protected:
 		ValueScalar3DFunction() = default;
