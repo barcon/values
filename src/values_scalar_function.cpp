@@ -2,13 +2,13 @@
 
 namespace values 
 {
-    ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Value_D_D function_Value_D_D, String name, String key)
+    ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key)
     {
         auto res = ValueScalar1DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Value_D_D);
+        res->SetFunction(function_Pointer_D_D);
 
         return res;
     }
@@ -64,18 +64,18 @@ namespace values
     {
         key_ = key;
     }
-    void ValueScalar1DFunction::SetFunction(Function_Value_D_D function_Value_D_D)
+    void ValueScalar1DFunction::SetFunction(Function_Pointer_D_D function_Pointer_D_D)
     {
-        function_ = function_Value_D_D;
+        function_ = function_Pointer_D_D;
     }
 
-    ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Value_D_DD function_Value_D_DD, String name, String key)
+    ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key)
     {
         auto res = ValueScalar2DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Value_D_DD);
+        res->SetFunction(function_Pointer_D_DD);
 
         return res;
     }
@@ -131,18 +131,18 @@ namespace values
     {
         key_ = key;
     }
-    void ValueScalar2DFunction::SetFunction(Function_Value_D_DD function_Value_D_DD)
+    void ValueScalar2DFunction::SetFunction(Function_Pointer_D_DD function_Pointer_D_DD)
     {
-        function_ = function_Value_D_DD;
+        function_ = function_Pointer_D_DD;
     }
 
-    ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Value_D_DDD function_Value_D_DDD, String name, String key)
+    ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key)
     {
         auto res = ValueScalar3DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Value_D_DDD);
+        res->SetFunction(function_Pointer_D_DDD);
 
         return res;
     }
@@ -198,8 +198,8 @@ namespace values
     {
         key_ = key;
     }
-    void ValueScalar3DFunction::SetFunction(Function_Value_D_DDD function_Value_D_DDD)
+    void ValueScalar3DFunction::SetFunction(Function_Pointer_D_DDD function_Pointer_D_DDD)
     {
-        function_ = function_Value_D_DDD;
+        function_ = function_Pointer_D_DDD;
     }
 }

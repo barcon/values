@@ -8,10 +8,6 @@
 #include <memory>
 #include <unordered_map>
 
-using Function_Value_D_D = double (*)(double);
-using Function_Value_D_DD = double (*)(double, double);
-using Function_Value_D_DDD = double (*)(double, double, double);
-
 namespace values
 {
 	using Scalar = eilig::Scalar;
@@ -29,6 +25,11 @@ namespace values
 	using Status = long long int;
 
 	const String valuesLogger = "VALUES";
+
+	using Function_Pointer_D_D = double (*)(double);
+	using Function_Pointer_D_DD = double (*)(double, double);
+	using Function_Pointer_D_DDD = double (*)(double, double, double);
+
 } // namespace values
 
 #endif /* VALUES_TYPES_HPP_*/
