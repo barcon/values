@@ -2,14 +2,6 @@
 
 namespace values
 {
-    ValueBoolPtr CreateValueBool(bool value)
-    {
-        auto res = ValueBool::Create();
-
-        res->SetValue(value);
-
-        return res;
-    }
     ValueBoolPtr CreateValueBool(bool value, String name, String key)
     {
         auto res = ValueBool::Create();

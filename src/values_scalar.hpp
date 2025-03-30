@@ -9,7 +9,6 @@ namespace values
 	using ValueScalarPtr = std::shared_ptr<ValueScalar>;
 	using ConstValueScalarPtr = std::shared_ptr< const ValueScalar >;
 
-	ValueScalarPtr CreateValueScalar(Scalar value);
 	ValueScalarPtr CreateValueScalar(Scalar value, String name, String key);
 
 	IScalarPtr CastToScalar(IValuePtr value);
@@ -44,7 +43,6 @@ namespace values
 	using ValueScalar1DPtr = std::shared_ptr<ValueScalar1D>;
 	using ConstValueScalar1DPtr = std::shared_ptr< const ValueScalar1D >;
 
-	ValueScalar1DPtr CreateValueScalar1D(Scalar value);
 	ValueScalar1DPtr CreateValueScalar1D(Scalar value, String name, String key);
 
 	IScalar1DPtr CastToScalar1D(IValuePtr value);
@@ -80,7 +78,6 @@ namespace values
 	using ValueScalar2DPtr = std::shared_ptr<ValueScalar2D>;
 	using ConstValueScalar2DPtr = std::shared_ptr< const ValueScalar2D >;
 
-	ValueScalar2DPtr CreateValueScalar2D(Scalar value);
 	ValueScalar2DPtr CreateValueScalar2D(Scalar value, String name, String key);
 
 	IScalar2DPtr CastToScalar2D(IValuePtr value);
@@ -116,7 +113,6 @@ namespace values
 	using ValueScalar3DPtr = std::shared_ptr<ValueScalar3D>;
 	using ConstValueScalar3DPtr = std::shared_ptr< const ValueScalar3D >;
 
-	ValueScalar3DPtr CreateValueScalar3D(Scalar value);
 	ValueScalar3DPtr CreateValueScalar3D(Scalar value, String name, String key);
 
 	IScalar3DPtr CastToScalar3D(IValuePtr value);

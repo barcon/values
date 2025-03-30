@@ -2,14 +2,6 @@
 
 namespace values
 {
-    ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType)
-    {
-        auto res = ValueMatrix3DInterpolation::Create();
-
-        res->SetNodes(nodes, interpolationType);
-
-        return res;
-    }
     ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType, String name, String key)
     {
         auto res = ValueMatrix3DInterpolation::Create();
