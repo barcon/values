@@ -9,6 +9,7 @@ namespace values
 	using ValueBoolPtr = std::shared_ptr<ValueBool>;
 	using ConstValueBoolPtr = std::shared_ptr< const ValueBool >;
 
+	ValueBoolPtr CreateValueBool(bool value);
 	ValueBoolPtr CreateValueBool(bool value, String name, String key);
 
 	IBoolPtr CastToBool(IValuePtr value);
