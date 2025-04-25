@@ -9,6 +9,7 @@ namespace values
 	using ValueVectorPtr = std::shared_ptr<ValueVector>;
 	using ConstValueVectorPtr = std::shared_ptr< const ValueVector >;
 
+	ValueVectorPtr CreateValueVector(const Vector& value);
 	ValueVectorPtr CreateValueVector(const Vector& value, String name, String key);
 
 	IVectorPtr CastToVector(IValuePtr value);
@@ -43,6 +44,7 @@ namespace values
 	using ValueVector1DPtr = std::shared_ptr<ValueVector1D>;
 	using ConstValueVector1DPtr = std::shared_ptr< const ValueVector1D >;
 
+	ValueVector1DPtr CreateValueVector1D(const Vector& value);
 	ValueVector1DPtr CreateValueVector1D(const Vector& value, String name, String key);
 
 	IVector1DPtr CastToVector1D(IValuePtr value);
@@ -78,6 +80,7 @@ namespace values
 	using ValueVector2DPtr = std::shared_ptr<ValueVector2D>;
 	using ConstValueVector2DPtr = std::shared_ptr< const ValueVector2D >;
 
+	ValueVector2DPtr CreateValueVector2D(const Vector& value);
 	ValueVector2DPtr CreateValueVector2D(const Vector& value, String name, String key);
 
 	IVector2DPtr CastToVector2D(IValuePtr value);
@@ -113,6 +116,7 @@ namespace values
 	using ValueVector3DPtr = std::shared_ptr<ValueVector3D>;
 	using ConstValueVector3DPtr = std::shared_ptr< const ValueVector3D >;
 
+	ValueVector3DPtr CreateValueVector3D(const Vector& value);
 	ValueVector3DPtr CreateValueVector3D(const Vector& value, String name, String key);
 
 	IVector3DPtr CastToVector3D(IValuePtr value);

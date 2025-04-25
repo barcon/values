@@ -2,6 +2,14 @@
 
 namespace values
 {
+    ValueVectorPtr CreateValueVector(const Vector& value)
+    {
+        auto res = ValueVector::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueVectorPtr CreateValueVector(const Vector& value, String name, String key)
     {
         auto res = ValueVector::Create();
@@ -65,6 +73,14 @@ namespace values
         value_ = value;
     }
 
+    ValueVector1DPtr CreateValueVector1D(const Vector& value)
+    {
+        auto res = ValueVector1D::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueVector1DPtr CreateValueVector1D(const Vector& value, String name, String key)
     {
         auto res = ValueVector1D::Create();
@@ -132,6 +148,14 @@ namespace values
         value_ = value;
     }
 
+    ValueVector2DPtr CreateValueVector2D(const Vector& value)
+    {
+        auto res = ValueVector2D::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueVector2DPtr CreateValueVector2D(const Vector& value, String name, String key)
     {
         auto res = ValueVector2D::Create();
@@ -199,6 +223,14 @@ namespace values
         value_ = value;
     }
 
+    ValueVector3DPtr CreateValueVector3D(const Vector& value)
+    {
+        auto res = ValueVector3D::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueVector3DPtr CreateValueVector3D(const Vector& value, String name, String key)
     {
         auto res = ValueVector3D::Create();

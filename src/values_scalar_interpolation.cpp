@@ -2,6 +2,14 @@
 
 namespace values
 {
+    ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType)
+    {
+        auto res = ValueScalar3DInterpolation::Create();
+
+        res->SetNodes(nodes, interpolationType);
+
+        return res;
+    }
     ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType, String name, String key)
     {
         auto res = ValueScalar3DInterpolation::Create();

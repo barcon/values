@@ -2,6 +2,14 @@
 
 namespace values
 {
+    ValueMatrixPtr CreateValueMatrix(const Matrix& value)
+    {
+        auto res = ValueMatrix::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key)
     {
         auto res = ValueMatrix::Create();

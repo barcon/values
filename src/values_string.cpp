@@ -2,6 +2,14 @@
 
 namespace values
 {
+    ValueStringPtr CreateValueString(String value)
+    {
+        auto res = ValueString::Create();
+
+        res->SetValue(value);
+
+        return res;
+    }
     ValueStringPtr CreateValueString(String value, String name, String key)
     {
         auto res = ValueString::Create();

@@ -9,6 +9,7 @@ namespace values
 	using ValueScalar1DFunctionPtr = std::shared_ptr<ValueScalar1DFunction>;
 	using ConstValueScalar1DFunctionPtr = std::shared_ptr< const ValueScalar1DFunction >;
 
+	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D);
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key);
 
 	IScalar1DPtr CastToScalar1DFunction(IValuePtr value);

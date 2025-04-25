@@ -9,6 +9,7 @@ namespace values
 	using ValueMatrixPtr = std::shared_ptr<ValueMatrix>;
 	using ConstValueMatrixPtr = std::shared_ptr< const ValueMatrix >;
 
+	ValueMatrixPtr CreateValueMatrix(const Matrix& value);
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key);
 
 	IMatrixPtr CastToMatrix(IValuePtr value);

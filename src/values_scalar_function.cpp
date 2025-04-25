@@ -2,6 +2,14 @@
 
 namespace values 
 {
+    ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D)
+    {
+        auto res = ValueScalar1DFunction::Create();
+
+        res->SetFunction(function_Pointer_D_D);
+
+        return res;
+    }
     ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key)
     {
         auto res = ValueScalar1DFunction::Create();
