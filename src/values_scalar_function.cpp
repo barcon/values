@@ -2,6 +2,77 @@
 
 namespace values 
 {
+    ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D)
+    {
+        auto res = ValueScalarFunction::Create();
+
+        res->SetFunction(function_Pointer_D);
+
+        return res;
+    }
+    ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key)
+    {
+        auto res = ValueScalarFunction::Create();
+
+        res->SetName(name);
+        res->SetKey(key);
+        res->SetFunction(function_Pointer_D);
+
+        return res;
+    }
+    IScalarPtr CastToScalarFunction(IValuePtr value)
+    {
+        if (value == nullptr)
+        {
+            return nullptr;
+        }
+
+        if (value->GetType() != value_scalar_function)
+        {
+            return nullptr;
+        }
+
+        return std::dynamic_pointer_cast<IScalar>(value);
+    }
+    ValueScalarFunctionPtr ValueScalarFunction::Create()
+    {
+        class MakeSharedEnabler : public ValueScalarFunction
+        {
+        };
+
+        auto res = std::make_shared<MakeSharedEnabler>();
+
+        return res;
+    }
+    Type ValueScalarFunction::GetType() const
+    {
+        return type_;
+    }
+    const String& ValueScalarFunction::GetName() const
+    {
+        return name_;
+    }
+    const String& ValueScalarFunction::GetKey() const
+    {
+        return key_;
+    }
+    Scalar ValueScalarFunction::GetValue() const
+    {
+        return function_();
+    }
+    void ValueScalarFunction::SetName(const String& name)
+    {
+        name_ = name;
+    }
+    void ValueScalarFunction::SetKey(const String& key)
+    {
+        key_ = key;
+    }
+    void ValueScalarFunction::SetFunction(Function_Pointer_D function_Pointer_D)
+    {
+        function_ = function_Pointer_D;
+    }
+
     ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D)
     {
         auto res = ValueScalar1DFunction::Create();

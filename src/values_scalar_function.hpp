@@ -5,6 +5,42 @@
 
 namespace values
 {
+	class ValueScalarFunction;
+	using ValueScalarFunctionPtr = std::shared_ptr<ValueScalarFunction>;
+	using ConstValueScalarFunctionPtr = std::shared_ptr< const ValueScalarFunction >;
+
+	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D);
+	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key);
+
+	IScalarPtr CastToScalarFunction(IValuePtr value);
+
+	class ValueScalarFunction : public IScalar
+	{
+	public:
+		virtual ~ValueScalarFunction() = default;
+
+		static ValueScalarFunctionPtr Create();
+
+		Type GetType() const override;
+		const String& GetName() const override;
+		const String& GetKey() const override;
+		Scalar GetValue() const override;
+
+		void SetName(const String& name) override;
+		void SetKey(const String& key) override;
+		void SetFunction(Function_Pointer_D function_Pointer_D);
+
+	protected:
+		ValueScalarFunction() = default;
+
+		String name_{};
+		String key_{};
+		Function_Pointer_D function_{ nullptr };
+
+		Type type_{ value_scalar_function };
+	};
+
+
 	class ValueScalar1DFunction;
 	using ValueScalar1DFunctionPtr = std::shared_ptr<ValueScalar1DFunction>;
 	using ConstValueScalar1DFunctionPtr = std::shared_ptr< const ValueScalar1DFunction >;

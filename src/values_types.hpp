@@ -26,6 +26,7 @@ namespace values
 
 	const String valuesLogger = "VALUES";
 
+	using Function_Pointer_D = double (*)();
 	using Function_Pointer_D_D = double (*)(double);
 	using Function_Pointer_D_DD = double (*)(double, double);
 	using Function_Pointer_D_DDD = double (*)(double, double, double);
