@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IScalar3DPtr CastToScalar3DInterpolation(IValuePtr value)
+    IScalar3DPtr CastToValueScalar3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)
         {

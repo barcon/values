@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IStringPtr CastToString(IValuePtr value)
+    IStringPtr CastToValueString(IValuePtr value)
     {
         if (value == nullptr)
         {

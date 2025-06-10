@@ -12,7 +12,7 @@ namespace values
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value);
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key);
 
-	IMatrixPtr CastToMatrix(IValuePtr value);
+	IMatrixPtr CastToValueMatrix(IValuePtr value);
 
 	class ValueMatrix : public IMatrix
 	{
@@ -46,7 +46,7 @@ namespace values
 
 	ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value, String name, String key);
 
-	IMatrix1DPtr CastToMatrix1D(IValuePtr value);
+	IMatrix1DPtr CastToValueMatrix1D(IValuePtr value);
 
 	class ValueMatrix1D : public IMatrix1D
 	{
@@ -81,7 +81,7 @@ namespace values
 
 	ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value, String name, String key);
 
-	IMatrix2DPtr CastToMatrix2D(IValuePtr value);
+	IMatrix2DPtr CastToValueMatrix2D(IValuePtr value);
 
 	class ValueMatrix2D : public IMatrix2D
 	{
@@ -116,7 +116,7 @@ namespace values
 
 	ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value, String name, String key);
 
-	IMatrix3DPtr CastToMatrix3D(IValuePtr value);
+	IMatrix3DPtr CastToValueMatrix3D(IValuePtr value);
 
 	class ValueMatrix3D : public IMatrix3D
 	{

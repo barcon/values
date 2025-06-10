@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IBoolPtr CastToBool(IValuePtr value)
+    IBoolPtr CastToValueBool(IValuePtr value)
     {
         if (value == nullptr)
         {

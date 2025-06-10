@@ -31,6 +31,11 @@ namespace values
 	using Function_Pointer_D_DD = double (*)(double, double);
 	using Function_Pointer_D_DDD = double (*)(double, double, double);
 
+	using Function_Pointer_V = Vector (*)();
+	using Function_Pointer_V_D = Vector (*)(double);
+	using Function_Pointer_V_DD = Vector (*)(double, double);
+	using Function_Pointer_V_DDD = Vector (*)(double, double, double);
+
 } // namespace values
 
 #endif /* VALUES_TYPES_HPP_*/

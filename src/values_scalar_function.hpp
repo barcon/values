@@ -12,7 +12,7 @@ namespace values
 	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D);
 	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key);
 
-	IScalarPtr CastToScalarFunction(IValuePtr value);
+	IScalarPtr CastToValueScalarFunction(IValuePtr value);
 
 	class ValueScalarFunction : public IScalar
 	{
@@ -48,7 +48,7 @@ namespace values
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D);
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key);
 
-	IScalar1DPtr CastToScalar1DFunction(IValuePtr value);
+	IScalar1DPtr CastToValueScalar1DFunction(IValuePtr value);
 
 	class ValueScalar1DFunction : public IScalar1D
 	{
@@ -83,7 +83,7 @@ namespace values
 
 	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key);
 
-	IScalar2DPtr CastToScalar2DFunction(IValuePtr value);
+	IScalar2DPtr CastToValueScalar2DFunction(IValuePtr value);
 
 	class ValueScalar2DFunction : public IScalar2D
 	{
@@ -118,7 +118,7 @@ namespace values
 
 	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key);
 
-	IScalar3DPtr CastToScalar3DFunction(IValuePtr value);
+	IScalar3DPtr CastToValueScalar3DFunction(IValuePtr value);
 
 	class ValueScalar3DFunction : public IScalar3D
 	{

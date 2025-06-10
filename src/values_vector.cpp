@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IVectorPtr CastToVector(IValuePtr value)
+    IVectorPtr CastToValueVector(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -91,7 +91,7 @@ namespace values
 
         return res;
     }
-    IVector1DPtr CastToVector1D(IValuePtr value)
+    IVector1DPtr CastToValueVector1D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -166,7 +166,7 @@ namespace values
 
         return res;
     }
-    IVector2DPtr CastToVector2D(IValuePtr value)
+    IVector2DPtr CastToValueVector2D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -241,7 +241,7 @@ namespace values
 
         return res;
     }
-    IVector3DPtr CastToVector3D(IValuePtr value)
+    IVector3DPtr CastToValueVector3D(IValuePtr value)
     {
         if (value == nullptr)
         {

@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IMatrix3DPtr CastToMatrix3DInterpolation(IValuePtr value)
+    IMatrix3DPtr CastToValueMatrix3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)
         {

@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IScalarPtr CastToScalar(IValuePtr value)
+    IScalarPtr CastToValueValueScalar(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -91,7 +91,7 @@ namespace values
 
         return res;
     }
-    IScalar1DPtr CastToScalar1D(IValuePtr value)
+    IScalar1DPtr CastToValueValueScalar1D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -166,7 +166,7 @@ namespace values
 
         return res;
     }
-    IScalar2DPtr CastToScalar2D(IValuePtr value)
+    IScalar2DPtr CastToValueValueScalar2D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -241,7 +241,7 @@ namespace values
 
         return res;
     }
-    IScalar3DPtr CastToScalar3D(IValuePtr value)
+    IScalar3DPtr CastToValueValueScalar3D(IValuePtr value)
     {
         if (value == nullptr)
         {

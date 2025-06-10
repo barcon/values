@@ -99,6 +99,7 @@
     <ClInclude Include="..\src\values_string.hpp" />
     <ClInclude Include="..\src\values_types.hpp" />
     <ClInclude Include="..\src\values_vector.hpp" />
+    <ClInclude Include="..\src\values_vector_function.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\values_bool.cpp" />
@@ -109,6 +110,7 @@
     <ClCompile Include="..\src\values_scalar_interpolation.cpp" />
     <ClCompile Include="..\src\values_string.cpp" />
     <ClCompile Include="..\src\values_vector.cpp" />
+    <ClCompile Include="..\src\values_vector_function.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

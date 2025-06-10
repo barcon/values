@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IMatrixPtr CastToMatrix(IValuePtr value)
+    IMatrixPtr CastToValueMatrix(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -83,7 +83,7 @@ namespace values
 
         return res;
     }
-    IMatrix1DPtr CastToMatrix1D(IValuePtr value)
+    IMatrix1DPtr CastToValueMatrix1D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -150,7 +150,7 @@ namespace values
 
         return res;
     }
-    IMatrix2DPtr CastToMatrix2D(IValuePtr value)
+    IMatrix2DPtr CastToValueMatrix2D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -217,7 +217,7 @@ namespace values
 
         return res;
     }
-    IMatrix3DPtr CastToMatrix3D(IValuePtr value)
+    IMatrix3DPtr CastToValueMatrix3D(IValuePtr value)
     {
         if (value == nullptr)
         {
