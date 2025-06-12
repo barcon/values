@@ -2,6 +2,7 @@
 #define VALUES_VECTOR_FUNCTION_HPP_
 
 #include "values_base.hpp"
+#include "values_scalar_function.hpp"
 
 namespace values
 {
@@ -9,8 +10,8 @@ namespace values
 	using ValueVectorFunctionPtr = std::shared_ptr<ValueVectorFunction>;
 	using ConstValueVectorFunctionPtr = std::shared_ptr< const ValueVectorFunction >;
 
-	ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V);
-	ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V, String name, String key);
+	ValueVectorFunctionPtr CreateValueVectorFunction(ValueScalarFunctions functions);
+	ValueVectorFunctionPtr CreateValueVectorFunction(ValueScalarFunctions functions, String name, String key);
 
 	IVectorPtr CastToValueVectorFunction(IValuePtr value);
 
@@ -29,14 +30,14 @@ namespace values
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
 
-		void SetFunction(Function_Pointer_V function_Pointer_V);
+		void SetFunctions(ValueScalarFunctions functions);
 
 	protected:
 		ValueVectorFunction() = default;
 
 		String name_{};
 		String key_{};
-		Function_Pointer_V function_{ nullptr };
+		ValueScalarFunctions functions_;
 
 		Type type_{ value_vector_function };
 	};
@@ -45,8 +46,8 @@ namespace values
 	using ValueVector1DFunctionPtr = std::shared_ptr<ValueVector1DFunction>;
 	using ConstValueVector1DFunctionPtr = std::shared_ptr< const ValueVector1DFunction >;
 
-	ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D);
-	ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D, String name, String key);
+	ValueVector1DFunctionPtr CreateValueVector1DFunction(ValueScalar1DFunctions functions);
+	ValueVector1DFunctionPtr CreateValueVector1DFunction(ValueScalar1DFunctions functions, String name, String key);
 
 	IVector1DPtr CastToValueVector1DFunction(IValuePtr value);
 
@@ -66,14 +67,14 @@ namespace values
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
 
-		void SetFunction(Function_Pointer_V_D function_Pointer_V_D);
+		void SetFunctions(ValueScalar1DFunctions functions);
 
 	protected:
 		ValueVector1DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Function_Pointer_V_D function_{ nullptr };
+		ValueScalar1DFunctions functions_;
 
 		Type type_{ value_vector1D_function };
 	};
@@ -82,8 +83,8 @@ namespace values
 	using ValueVector2DFunctionPtr = std::shared_ptr<ValueVector2DFunction>;
 	using ConstValueVector2DFunctionPtr = std::shared_ptr< const ValueVector2DFunction >;
 
-	ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD);
-	ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD, String name, String key);
+	ValueVector2DFunctionPtr CreateValueVector2DFunction(ValueScalar2DFunctions functions);
+	ValueVector2DFunctionPtr CreateValueVector2DFunction(ValueScalar2DFunctions functions, String name, String key);
 
 	IVector2DPtr CastToValueVector2DFunction(IValuePtr value);
 
@@ -103,14 +104,14 @@ namespace values
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
 
-		void SetFunction(Function_Pointer_V_DD function_Pointer_V_DD);
+		void SetFunctions(ValueScalar2DFunctions functions);
 
 	protected:
 		ValueVector2DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Function_Pointer_V_DD function_{ nullptr };
+		ValueScalar2DFunctions functions_;
 
 		Type type_{ value_vector2D_function };
 	};
@@ -119,8 +120,8 @@ namespace values
 	using ValueVector3DFunctionPtr = std::shared_ptr<ValueVector3DFunction>;
 	using ConstValueVector3DFunctionPtr = std::shared_ptr< const ValueVector3DFunction >;
 
-	ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD);
-	ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD, String name, String key);
+	ValueVector3DFunctionPtr CreateValueVector3DFunction(ValueScalar3DFunctions functions);
+	ValueVector3DFunctionPtr CreateValueVector3DFunction(ValueScalar3DFunctions functions, String name, String key);
 
 	IVector3DPtr CastToValueVector3DFunction(IValuePtr value);
 
@@ -140,14 +141,14 @@ namespace values
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
 		
-		void SetFunction(Function_Pointer_V_DDD function_Pointer_V_DDD);
+		void SetFunctions(ValueScalar3DFunctions functions);
 
 	protected:
 		ValueVector3DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Function_Pointer_V_DDD function_{ nullptr };
+		ValueScalar3DFunctions functions_;
 
 		Type type_{ value_vector3D_function };
 	};

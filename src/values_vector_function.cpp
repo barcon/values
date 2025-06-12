@@ -2,21 +2,21 @@
 
 namespace values
 {
-    ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V)
+    ValueVectorFunctionPtr CreateValueVectorFunction(ValueScalarFunctions functions)
     {
         auto res = ValueVectorFunction::Create();
 
-        res->SetFunction(function_Pointer_V);
+		res->SetFunctions(functions);
 
         return res;
     }
-    ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V, String name, String key)
+    ValueVectorFunctionPtr CreateValueVectorFunction(ValueScalarFunctions functions, String name, String key)
     {
         auto res = ValueVectorFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Pointer_V);
+        res->SetFunctions(functions);
 
         return res;
     }
@@ -58,7 +58,15 @@ namespace values
     }
     Vector ValueVectorFunction::GetValue() const
     {
-        return function_();
+		auto len = functions_.size();
+		auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+			vec(i) = functions_[i]->GetValue();
+        }
+
+        return vec;
     }
     void ValueVectorFunction::SetName(const String& name)
     {
@@ -68,26 +76,26 @@ namespace values
     {
         key_ = key;
     }
-    void ValueVectorFunction::SetFunction(Function_Pointer_V function_Pointer_V)
+    void ValueVectorFunction::SetFunctions(ValueScalarFunctions functions)
     {
-        function_ = function_Pointer_V;
+        functions_ = functions;
     }
   
-    ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D)
+    ValueVector1DFunctionPtr CreateValueVector1DFunction(ValueScalar1DFunctions functions)
     {
         auto res = ValueVector1DFunction::Create();
 
-        res->SetFunction(function_Pointer_V_D);
+		res->SetFunctions(functions);
 
         return res;
     }
-    ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D, String name, String key)
+    ValueVector1DFunctionPtr CreateValueVector1DFunction(ValueScalar1DFunctions functions, String name, String key)
     {
         auto res = ValueVector1DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Pointer_V_D);
+        res->SetFunctions(functions);
 
         return res;
     }
@@ -129,11 +137,27 @@ namespace values
     }
     Vector ValueVector1DFunction::GetValue(Scalar x) const
     {
-        return function_(x);
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(x);
+        }
+
+        return vec;
     }
     Vector ValueVector1DFunction::GetValue(const Vector& point) const
     {
-        return function_(point(0));
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(point(0));
+        }
+
+        return vec;
     }
     void ValueVector1DFunction::SetName(const String& name)
     {
@@ -143,26 +167,26 @@ namespace values
     {
         key_ = key;
     }
-    void ValueVector1DFunction::SetFunction(Function_Pointer_V_D function_Pointer_V_D)
+    void ValueVector1DFunction::SetFunctions(ValueScalar1DFunctions functions)
     {
-        function_ = function_Pointer_V_D;
+        functions_ = functions;
     }
 
-    ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD)
+    ValueVector2DFunctionPtr CreateValueVector2DFunction(ValueScalar2DFunctions functions)
     {
         auto res = ValueVector2DFunction::Create();
 
-        res->SetFunction(function_Pointer_V_DD);
+        res->SetFunctions(functions);
 
         return res;
     }
-    ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD, String name, String key)
+    ValueVector2DFunctionPtr CreateValueVector2DFunction(ValueScalar2DFunctions functions, String name, String key)
     {
         auto res = ValueVector2DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Pointer_V_DD);
+        res->SetFunctions(functions);
 
         return res;
     }
@@ -204,11 +228,27 @@ namespace values
     }
     Vector ValueVector2DFunction::GetValue(Scalar x, Scalar y) const
     {
-        return function_(x, y);
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(x, y);
+        }
+
+        return vec;
     }
     Vector ValueVector2DFunction::GetValue(const Vector& point) const
     {
-        return function_(point(0), point(1));
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(point(0), point(1));
+        }
+
+        return vec;
     }
     void ValueVector2DFunction::SetName(const String& name)
     {
@@ -218,26 +258,26 @@ namespace values
     {
         key_ = key;
     }
-    void ValueVector2DFunction::SetFunction(Function_Pointer_V_DD function_Pointer_V_DD)
+    void ValueVector2DFunction::SetFunctions(ValueScalar2DFunctions functions)
     {
-        function_ = function_Pointer_V_DD;
+        functions_ = functions;
     }
 
-    ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD)
+    ValueVector3DFunctionPtr CreateValueVector3DFunction(ValueScalar3DFunctions functions)
     {
         auto res = ValueVector3DFunction::Create();
 
-        res->SetFunction(function_Pointer_V_DDD);
+        res->SetFunctions(functions);
 
         return res;
     }
-    ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD, String name, String key)
+    ValueVector3DFunctionPtr CreateValueVector3DFunction(ValueScalar3DFunctions functions, String name, String key)
     {
         auto res = ValueVector3DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetFunction(function_Pointer_V_DDD);
+        res->SetFunctions(functions);
 
         return res;
     }
@@ -279,11 +319,27 @@ namespace values
     }
     Vector ValueVector3DFunction::GetValue(Scalar x, Scalar y, Scalar z) const
     {
-        return function_(x, y, z);
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(x, y, z);
+        }
+
+        return vec;
     }
     Vector ValueVector3DFunction::GetValue(const Vector& point) const
     {
-        return function_(point(0), point(1), point(2));
+        auto len = functions_.size();
+        auto vec = Vector(len);
+
+        for (size_t i = 0; i < len; ++i)
+        {
+            vec(i) = functions_[i]->GetValue(point(0), point(1), point(2));
+        }
+
+        return vec;
     }
     void ValueVector3DFunction::SetName(const String& name)
     {
@@ -293,8 +349,8 @@ namespace values
     {
         key_ = key;
     }
-    void ValueVector3DFunction::SetFunction(Function_Pointer_V_DDD function_Pointer_V_DDD)
+    void ValueVector3DFunction::SetFunctions(ValueScalar3DFunctions functions)
     {
-        function_ = function_Pointer_V_DDD;
+        functions_ = functions;
     }
 }
