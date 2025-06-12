@@ -9,8 +9,8 @@ namespace values
 	using ValueVectorFunctionPtr = std::shared_ptr<ValueVectorFunction>;
 	using ConstValueVectorFunctionPtr = std::shared_ptr< const ValueVectorFunction >;
 
-	ValueVectorFunctionPtr CreateValueVectorFunction(const Vector& value);
-	ValueVectorFunctionPtr CreateValueVectorFunction(const Vector& value, String name, String key);
+	ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V);
+	ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V, String name, String key);
 
 	IVectorPtr CastToValueVectorFunction(IValuePtr value);
 
@@ -28,33 +28,34 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetValue(const Vector& value);
+
+		void SetFunction(Function_Pointer_V function_Pointer_V);
 
 	protected:
 		ValueVectorFunction() = default;
 
 		String name_{};
 		String key_{};
-		Vector value_;
+		Function_Pointer_V function_{ nullptr };
 
-		Type type_{ value_vector };
+		Type type_{ value_vector_function };
 	};
 
-	class ValueVectorFunction1D;
-	using ValueVectorFunction1DPtr = std::shared_ptr<ValueVectorFunction1D>;
-	using ConstValueVectorFunction1DPtr = std::shared_ptr< const ValueVectorFunction1D >;
+	class ValueVector1DFunction;
+	using ValueVector1DFunctionPtr = std::shared_ptr<ValueVector1DFunction>;
+	using ConstValueVector1DFunctionPtr = std::shared_ptr< const ValueVector1DFunction >;
 
-	ValueVectorFunction1DPtr CreateValueVectorFunction1D(const Vector& value);
-	ValueVectorFunction1DPtr CreateValueVectorFunction1D(const Vector& value, String name, String key);
+	ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D);
+	ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D, String name, String key);
 
-	IVector1DPtr CastToValueVectorFunction1D(IValuePtr value);
+	IVector1DPtr CastToValueVector1DFunction(IValuePtr value);
 
-	class ValueVectorFunction1D : public IVector1D
+	class ValueVector1DFunction : public IVector1D
 	{
 	public:
-		virtual ~ValueVectorFunction1D() = default;
+		virtual ~ValueVector1DFunction() = default;
 
-		static ValueVectorFunction1DPtr Create();
+		static ValueVector1DFunctionPtr Create();
 
 		Type GetType() const override;
 		const String& GetName() const override;
@@ -64,33 +65,34 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetValue(const Vector& value);
+
+		void SetFunction(Function_Pointer_V_D function_Pointer_V_D);
 
 	protected:
-		ValueVectorFunction1D() = default;
+		ValueVector1DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Vector value_;
+		Function_Pointer_V_D function_{ nullptr };
 
-		Type type_{ value_vector1D };
+		Type type_{ value_vector1D_function };
 	};
 
-	class ValueVectorFunction2D;
-	using ValueVectorFunction2DPtr = std::shared_ptr<ValueVectorFunction2D>;
-	using ConstValueVectorFunction2DPtr = std::shared_ptr< const ValueVectorFunction2D >;
+	class ValueVector2DFunction;
+	using ValueVector2DFunctionPtr = std::shared_ptr<ValueVector2DFunction>;
+	using ConstValueVector2DFunctionPtr = std::shared_ptr< const ValueVector2DFunction >;
 
-	ValueVectorFunction2DPtr CreateValueVectorFunction2D(const Vector& value);
-	ValueVectorFunction2DPtr CreateValueVectorFunction2D(const Vector& value, String name, String key);
+	ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD);
+	ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD, String name, String key);
 
-	IVector2DPtr CastToValueVectorFunction2D(IValuePtr value);
+	IVector2DPtr CastToValueVector2DFunction(IValuePtr value);
 
-	class ValueVectorFunction2D : public IVector2D
+	class ValueVector2DFunction : public IVector2D
 	{
 	public:
-		virtual ~ValueVectorFunction2D() = default;
+		virtual ~ValueVector2DFunction() = default;
 
-		static ValueVectorFunction2DPtr Create();
+		static ValueVector2DFunctionPtr Create();
 
 		Type GetType() const override;
 		const String& GetName() const override;
@@ -100,33 +102,34 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetValue(const Vector& value);
+
+		void SetFunction(Function_Pointer_V_DD function_Pointer_V_DD);
 
 	protected:
-		ValueVectorFunction2D() = default;
+		ValueVector2DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Vector value_;
+		Function_Pointer_V_DD function_{ nullptr };
 
-		Type type_{ value_vector2D };
+		Type type_{ value_vector2D_function };
 	};
 
-	class ValueVectorFunction3D;
-	using ValueVectorFunction3DPtr = std::shared_ptr<ValueVectorFunction3D>;
-	using ConstValueVectorFunction3DPtr = std::shared_ptr< const ValueVectorFunction3D >;
+	class ValueVector3DFunction;
+	using ValueVector3DFunctionPtr = std::shared_ptr<ValueVector3DFunction>;
+	using ConstValueVector3DFunctionPtr = std::shared_ptr< const ValueVector3DFunction >;
 
-	ValueVectorFunction3DPtr CreateValueVectorFunction3D(const Vector& value);
-	ValueVectorFunction3DPtr CreateValueVectorFunction3D(const Vector& value, String name, String key);
+	ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD);
+	ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD, String name, String key);
 
-	IVector3DPtr CastToValueVectorFunction3D(IValuePtr value);
+	IVector3DPtr CastToValueVector3DFunction(IValuePtr value);
 
-	class ValueVectorFunction3D : public IVector3D
+	class ValueVector3DFunction : public IVector3D
 	{
 	public:
-		virtual ~ValueVectorFunction3D() = default;
+		virtual ~ValueVector3DFunction() = default;
 
-		static ValueVectorFunction3DPtr Create();
+		static ValueVector3DFunctionPtr Create();
 
 		Type GetType() const override;
 		const String& GetName() const override;
@@ -136,16 +139,17 @@ namespace values
 
 		void SetName(const String& name) override;
 		void SetKey(const String& key) override;
-		void SetValue(const Vector& value);
+		
+		void SetFunction(Function_Pointer_V_DDD function_Pointer_V_DDD);
 
 	protected:
-		ValueVectorFunction3D() = default;
+		ValueVector3DFunction() = default;
 
 		String name_{};
 		String key_{};
-		Vector value_;
+		Function_Pointer_V_DDD function_{ nullptr };
 
-		Type type_{ value_vector3D };
+		Type type_{ value_vector3D_function };
 	};
 
 } // namespace values

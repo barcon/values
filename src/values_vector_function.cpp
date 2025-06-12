@@ -2,21 +2,21 @@
 
 namespace values
 {
-    ValueVectorFunctionPtr CreateValueVectorFunction(const Vector& value)
+    ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V)
     {
         auto res = ValueVectorFunction::Create();
 
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V);
 
         return res;
     }
-    ValueVectorFunctionPtr CreateValueVectorFunction(const Vector& value, String name, String key)
+    ValueVectorFunctionPtr CreateValueVectorFunction(Function_Pointer_V function_Pointer_V, String name, String key)
     {
         auto res = ValueVectorFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V);
 
         return res;
     }
@@ -58,7 +58,7 @@ namespace values
     }
     Vector ValueVectorFunction::GetValue() const
     {
-        return value_;
+        return function_();
     }
     void ValueVectorFunction::SetName(const String& name)
     {
@@ -68,30 +68,30 @@ namespace values
     {
         key_ = key;
     }
-    void ValueVectorFunction::SetValue(const Vector& value)
+    void ValueVectorFunction::SetFunction(Function_Pointer_V function_Pointer_V)
     {
-        value_ = value;
+        function_ = function_Pointer_V;
     }
-
-    ValueVectorFunction1DPtr CreateValueVectorFunction1D(const Vector& value)
+  
+    ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D)
     {
-        auto res = ValueVectorFunction1D::Create();
+        auto res = ValueVector1DFunction::Create();
 
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_D);
 
         return res;
     }
-    ValueVectorFunction1DPtr CreateValueVectorFunction1D(const Vector& value, String name, String key)
+    ValueVector1DFunctionPtr CreateValueVector1DFunction(Function_Pointer_V_D function_Pointer_V_D, String name, String key)
     {
-        auto res = ValueVectorFunction1D::Create();
+        auto res = ValueVector1DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_D);
 
         return res;
     }
-    IVector1DPtr CastToValueVectorFunction1D(IValuePtr value)
+    IVector1DPtr CastToValueVector1DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -105,9 +105,9 @@ namespace values
 
         return std::dynamic_pointer_cast<IVector1D>(value);
     }
-    ValueVectorFunction1DPtr ValueVectorFunction1D::ValueVectorFunction1D::Create()
+    ValueVector1DFunctionPtr ValueVector1DFunction::ValueVector1DFunction::Create()
     {
-        class MakeSharedEnabler : public ValueVectorFunction1D
+        class MakeSharedEnabler : public ValueVector1DFunction
         {
         };
 
@@ -115,58 +115,58 @@ namespace values
 
         return res;
     }
-    Type ValueVectorFunction1D::GetType() const
+    Type ValueVector1DFunction::GetType() const
     {
         return type_;
     }
-    const String& ValueVectorFunction1D::GetName() const
+    const String& ValueVector1DFunction::GetName() const
     {
         return name_;
     }
-    const String& ValueVectorFunction1D::GetKey() const
+    const String& ValueVector1DFunction::GetKey() const
     {
         return key_;
     }
-    Vector ValueVectorFunction1D::GetValue(Scalar x) const
+    Vector ValueVector1DFunction::GetValue(Scalar x) const
     {
-        return value_;
+        return function_(x);
     }
-    Vector ValueVectorFunction1D::GetValue(const Vector& point) const
+    Vector ValueVector1DFunction::GetValue(const Vector& point) const
     {
-        return value_;
+        return function_(point(0));
     }
-    void ValueVectorFunction1D::SetName(const String& name)
+    void ValueVector1DFunction::SetName(const String& name)
     {
         name_ = name;
     }
-    void ValueVectorFunction1D::SetKey(const String& key)
+    void ValueVector1DFunction::SetKey(const String& key)
     {
         key_ = key;
     }
-    void ValueVectorFunction1D::SetValue(const Vector& value)
+    void ValueVector1DFunction::SetFunction(Function_Pointer_V_D function_Pointer_V_D)
     {
-        value_ = value;
+        function_ = function_Pointer_V_D;
     }
 
-    ValueVectorFunction2DPtr CreateValueVectorFunction2D(const Vector& value)
+    ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD)
     {
-        auto res = ValueVectorFunction2D::Create();
+        auto res = ValueVector2DFunction::Create();
 
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_DD);
 
         return res;
     }
-    ValueVectorFunction2DPtr CreateValueVectorFunction2D(const Vector& value, String name, String key)
+    ValueVector2DFunctionPtr CreateValueVector2DFunction(Function_Pointer_V_DD function_Pointer_V_DD, String name, String key)
     {
-        auto res = ValueVectorFunction2D::Create();
+        auto res = ValueVector2DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_DD);
 
         return res;
     }
-    IVector2DPtr CastToValueVectorFunction2D(IValuePtr value)
+    IVector2DPtr CastToValueVector2DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -180,9 +180,9 @@ namespace values
 
         return std::dynamic_pointer_cast<IVector2D>(value);
     }
-    ValueVectorFunction2DPtr ValueVectorFunction2D::ValueVectorFunction2D::Create()
+    ValueVector2DFunctionPtr ValueVector2DFunction::ValueVector2DFunction::Create()
     {
-        class MakeSharedEnabler : public ValueVectorFunction2D
+        class MakeSharedEnabler : public ValueVector2DFunction
         {
         };
 
@@ -190,58 +190,58 @@ namespace values
 
         return res;
     }
-    Type ValueVectorFunction2D::GetType() const
+    Type ValueVector2DFunction::GetType() const
     {
         return type_;
     }
-    const String& ValueVectorFunction2D::GetName() const
+    const String& ValueVector2DFunction::GetName() const
     {
         return name_;
     }
-    const String& ValueVectorFunction2D::GetKey() const
+    const String& ValueVector2DFunction::GetKey() const
     {
         return key_;
     }
-    Vector ValueVectorFunction2D::GetValue(Scalar x, Scalar y) const
+    Vector ValueVector2DFunction::GetValue(Scalar x, Scalar y) const
     {
-        return value_;
+        return function_(x, y);
     }
-    Vector ValueVectorFunction2D::GetValue(const Vector& point) const
+    Vector ValueVector2DFunction::GetValue(const Vector& point) const
     {
-        return value_;
+        return function_(point(0), point(1));
     }
-    void ValueVectorFunction2D::SetName(const String& name)
+    void ValueVector2DFunction::SetName(const String& name)
     {
         name_ = name;
     }
-    void ValueVectorFunction2D::SetKey(const String& key)
+    void ValueVector2DFunction::SetKey(const String& key)
     {
         key_ = key;
     }
-    void ValueVectorFunction2D::SetValue(const Vector& value)
+    void ValueVector2DFunction::SetFunction(Function_Pointer_V_DD function_Pointer_V_DD)
     {
-        value_ = value;
+        function_ = function_Pointer_V_DD;
     }
 
-    ValueVectorFunction3DPtr CreateValueVectorFunction3D(const Vector& value)
+    ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD)
     {
-        auto res = ValueVectorFunction3D::Create();
+        auto res = ValueVector3DFunction::Create();
 
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_DDD);
 
         return res;
     }
-    ValueVectorFunction3DPtr CreateValueVectorFunction3D(const Vector& value, String name, String key)
+    ValueVector3DFunctionPtr CreateValueVector3DFunction(Function_Pointer_V_DDD function_Pointer_V_DDD, String name, String key)
     {
-        auto res = ValueVectorFunction3D::Create();
+        auto res = ValueVector3DFunction::Create();
 
         res->SetName(name);
         res->SetKey(key);
-        res->SetValue(value);
+        res->SetFunction(function_Pointer_V_DDD);
 
         return res;
     }
-    IVector3DPtr CastToValueVectorFunction3D(IValuePtr value)
+    IVector3DPtr CastToValueVector3DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -255,9 +255,9 @@ namespace values
 
         return std::dynamic_pointer_cast<IVector3D>(value);
     }
-    ValueVectorFunction3DPtr ValueVectorFunction3D::ValueVectorFunction3D::Create()
+    ValueVector3DFunctionPtr ValueVector3DFunction::ValueVector3DFunction::Create()
     {
-        class MakeSharedEnabler : public ValueVectorFunction3D
+        class MakeSharedEnabler : public ValueVector3DFunction
         {
         };
 
@@ -265,36 +265,36 @@ namespace values
 
         return res;
     }
-    Type ValueVectorFunction3D::GetType() const
+    Type ValueVector3DFunction::GetType() const
     {
         return type_;
     }
-    const String& ValueVectorFunction3D::GetName() const
+    const String& ValueVector3DFunction::GetName() const
     {
         return name_;
     }
-    const String& ValueVectorFunction3D::GetKey() const
+    const String& ValueVector3DFunction::GetKey() const
     {
         return key_;
     }
-    Vector ValueVectorFunction3D::GetValue(Scalar x, Scalar y, Scalar z) const
+    Vector ValueVector3DFunction::GetValue(Scalar x, Scalar y, Scalar z) const
     {
-        return value_;
+        return function_(x, y, z);
     }
-    Vector ValueVectorFunction3D::GetValue(const Vector& point) const
+    Vector ValueVector3DFunction::GetValue(const Vector& point) const
     {
-        return value_;
+        return function_(point(0), point(1), point(2));
     }
-    void ValueVectorFunction3D::SetName(const String& name)
+    void ValueVector3DFunction::SetName(const String& name)
     {
         name_ = name;
     }
-    void ValueVectorFunction3D::SetKey(const String& key)
+    void ValueVector3DFunction::SetKey(const String& key)
     {
         key_ = key;
     }
-    void ValueVectorFunction3D::SetValue(const Vector& value)
+    void ValueVector3DFunction::SetFunction(Function_Pointer_V_DDD function_Pointer_V_DDD)
     {
-        value_ = value;
+        function_ = function_Pointer_V_DDD;
     }
 }
