@@ -89,7 +89,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\src\values.hpp" />
-    <ClInclude Include="..\src\values_base.hpp" />
     <ClInclude Include="..\src\values_bool.hpp" />
     <ClInclude Include="..\src\values_matrix.hpp" />
     <ClInclude Include="..\src\values_matrix_interpolation.hpp" />
@@ -99,7 +98,7 @@
     <ClInclude Include="..\src\values_string.hpp" />
     <ClInclude Include="..\src\values_types.hpp" />
     <ClInclude Include="..\src\values_vector.hpp" />
-    <ClInclude Include="..\src\values_vector_function.hpp" />
+    <ClInclude Include="..\src\values_vector_scalars.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\values_bool.cpp" />
@@ -110,7 +109,7 @@
     <ClCompile Include="..\src\values_scalar_interpolation.cpp" />
     <ClCompile Include="..\src\values_string.cpp" />
     <ClCompile Include="..\src\values_vector.cpp" />
-    <ClCompile Include="..\src\values_vector_function.cpp" />
+    <ClCompile Include="..\src\values_vector_scalars.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

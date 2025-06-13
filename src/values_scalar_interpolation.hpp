@@ -1,7 +1,7 @@
 #ifndef VALUES_SCALAR_INTERPOLATION_HPP_
 #define VALUES_SCALAR_INTERPOLATION_HPP_
 
-#include "values_base.hpp"
+#include "values_types.hpp"
 
 #include "nodes.hpp"
 #include "interpolation.hpp"

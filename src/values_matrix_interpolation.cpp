@@ -113,7 +113,7 @@ namespace values
         }
         else
         {
-            logger::Error(valuesLogger, "Not possible to set nodes or invalid interpolation method");
+            logger::Error(headerValues, "Not possible to set nodes or invalid interpolation method");
         }
     }
 }

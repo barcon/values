@@ -1,7 +1,7 @@
 #ifndef VALUES_SCALAR_FUNCTION_HPP_
 #define VALUES_SCALAR_FUNCTION_HPP_
 
-#include "values_base.hpp"
+#include "values_types.hpp"
 
 namespace values
 {
@@ -146,12 +146,6 @@ namespace values
 
 		Type type_{ value_scalar3D_function };
 	};
-
-	using ValueScalarFunctions = std::vector<ValueScalarFunctionPtr>;
-	using ValueScalar1DFunctions = std::vector<ValueScalar1DFunctionPtr>;
-	using ValueScalar2DFunctions = std::vector<ValueScalar2DFunctionPtr>;
-	using ValueScalar3DFunctions = std::vector<ValueScalar3DFunctionPtr>;
-
 } // namespace values
 
 #endif /* VALUES_SCALAR_FUNCTION_HPP_*/

@@ -1,7 +1,7 @@
 #ifndef VALUES_STRING_HPP_
 #define VALUES_STRING_HPP_
 
-#include "values_base.hpp"
+#include "values_types.hpp"
 
 namespace values
 {
