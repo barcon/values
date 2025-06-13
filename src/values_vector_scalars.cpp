@@ -421,5 +421,4 @@ namespace values
 
         scalars_[row] = scalar;
     }
-
 }

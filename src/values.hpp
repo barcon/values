@@ -8,7 +8,7 @@
 #include "values_scalar_function.hpp"
 #include "values_scalar_interpolation.hpp"
 #include "values_vector.hpp"
-#include "values_vector_function.hpp"
+#include "values_vector_scalars.hpp"
 #include "values_matrix.hpp"
 #include "values_matrix_interpolation.hpp"
 #include "values_string.hpp"
