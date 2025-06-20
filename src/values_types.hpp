@@ -29,61 +29,74 @@ namespace values
 
 	using Type = std::size_t;
 
-	static const Type value_bool = 1;
-	static const Type value_string = 2;
-	static const Type value_scalar = 3;
-	static const Type value_scalar_function = 4;
-	static const Type value_scalar_interpolation = 5;
-	static const Type value_scalar_congruent = 6;
-	static const Type value_scalar1D = 7;
-	static const Type value_scalar1D_function = 8;
-	static const Type value_scalar1D_interpolation = 9;
-	static const Type value_scalar1D_congruent = 10;
-	static const Type value_scalar2D = 11;
-	static const Type value_scalar2D_function = 12;
-	static const Type value_scalar2D_interpolation = 13;
-	static const Type value_scalar2D_congruent = 14;
-	static const Type value_scalar3D = 15;
-	static const Type value_scalar3D_function = 16;
-	static const Type value_scalar3D_interpolation = 17;
-	static const Type value_scalar3D_congruent = 18;
-	static const Type value_vector = 19;
-	static const Type value_vector_scalars = 20;
-	static const Type value_vector_interpolation = 21;
-	static const Type value_vector_congruent = 22;
-	static const Type value_vector1D = 23;
-	static const Type value_vector1D_scalars = 24;
-	static const Type value_vector1D_interpolation = 25;
-	static const Type value_vector1D_congruent = 26;
-	static const Type value_vector2D = 27;
-	static const Type value_vector2D_scalars = 28;
-	static const Type value_vector2D_interpolation = 29;
-	static const Type value_vector2D_congruent = 30;
-	static const Type value_vector3D = 31;
-	static const Type value_vector3D_scalars = 32;
-	static const Type value_vector3D_interpolation = 33;
-	static const Type value_vector3D_congruent = 34;
-	static const Type value_matrix = 35;
-	static const Type value_matrix_scalars = 36;
-	static const Type value_matrix_interpolation = 37;
-	static const Type value_matrix_congruent = 38;
-	static const Type value_matrix1D = 39;
-	static const Type value_matrix1D_scalars = 40;
-	static const Type value_matrix1D_interpolaiton = 41;
-	static const Type value_matrix1D_congruent = 42;
-	static const Type value_matrix2D = 43;
-	static const Type value_matrix2D_scalars = 44;
-	static const Type value_matrix2D_interpolation = 45;
-	static const Type value_matrix2D_congruent = 46;
-	static const Type value_matrix3D = 47;
-	static const Type value_matrix3D_scalars = 48;
-	static const Type value_matrix3D_interpolation = 49;
-	static const Type value_matrix3D_congruent = 50;
+	static const Type value_bool					= 1;
+	static const Type value_string					= 2;
+	static const Type value_scalar					= 3;
+	static const Type value_scalar_function			= 4;
+	static const Type value_scalar_time_function	= 4;
+	static const Type value_scalar_interpolation	= 5;
+	static const Type value_scalar_congruent		= 6;
+	static const Type value_scalar1D				= 7;
+	static const Type value_scalar1D_function		= 8;
+	static const Type value_scalar1D_time_function	= 8;
+	static const Type value_scalar1D_interpolation	= 9;
+	static const Type value_scalar1D_congruent		= 10;
+	static const Type value_scalar2D				= 11;
+	static const Type value_scalar2D_function		= 12;
+	static const Type value_scalar2D_time_function	= 12;
+	static const Type value_scalar2D_interpolation	= 13;
+	static const Type value_scalar2D_congruent		= 14;
+	static const Type value_scalar3D				= 15;
+	static const Type value_scalar3D_function		= 16;
+	static const Type value_scalar3D_time_function	= 16;
+	static const Type value_scalar3D_interpolation	= 17;
+	static const Type value_scalar3D_congruent		= 18;
+	static const Type value_vector					= 19;
+	static const Type value_vector_scalars			= 20;
+	static const Type value_vector_time_scalars		= 20;
+	static const Type value_vector_interpolation	= 21;
+	static const Type value_vector_congruent		= 22;
+	static const Type value_vector1D				= 23;
+	static const Type value_vector1D_scalars		= 24;
+	static const Type value_vector1D_time_scalars	= 24;
+	static const Type value_vector1D_interpolation	= 25;
+	static const Type value_vector1D_congruent		= 26;
+	static const Type value_vector2D				= 27;
+	static const Type value_vector2D_scalars		= 28;
+	static const Type value_vector2D_time_scalars	= 28;
+	static const Type value_vector2D_interpolation	= 29;
+	static const Type value_vector2D_congruent		= 30;
+	static const Type value_vector3D				= 31;
+	static const Type value_vector3D_scalars		= 32;
+	static const Type value_vector3D_time_scalars	= 32;
+	static const Type value_vector3D_interpolation	= 33;
+	static const Type value_vector3D_congruent		= 34;
+	static const Type value_matrix					= 35;
+	static const Type value_matrix_scalars			= 36;
+	static const Type value_matrix_time_scalars		= 36;
+	static const Type value_matrix_interpolation	= 37;
+	static const Type value_matrix_congruent		= 38;
+	static const Type value_matrix1D				= 39;
+	static const Type value_matrix1D_scalars		= 40;
+	static const Type value_matrix1D_time_scalars	= 40;
+	static const Type value_matrix1D_interpolaiton	= 41;
+	static const Type value_matrix1D_congruent		= 42;
+	static const Type value_matrix2D				= 43;
+	static const Type value_matrix2D_scalars		= 44;
+	static const Type value_matrix2D_time_scalars	= 44;
+	static const Type value_matrix2D_interpolation	= 45;
+	static const Type value_matrix2D_congruent		= 46;
+	static const Type value_matrix3D				= 47;
+	static const Type value_matrix3D_scalars		= 48;
+	static const Type value_matrix3D_time_scalars	= 48;
+	static const Type value_matrix3D_interpolation	= 49;
+	static const Type value_matrix3D_congruent		= 50;
 
 	using Function_Pointer_D = double (*)();
 	using Function_Pointer_D_D = double (*)(double);
 	using Function_Pointer_D_DD = double (*)(double, double);
 	using Function_Pointer_D_DDD = double (*)(double, double, double);
+	using Function_Pointer_D_DDDD = double (*)(double, double, double, double);
 
 	class IValue
 	{
@@ -123,6 +136,14 @@ namespace values
 		virtual Scalar GetValue() const = 0;
 	};
 
+	class IScalarTime : public IValue
+	{
+	public:
+		virtual ~IScalarTime() = default;
+
+		virtual Scalar GetValue(Scalar time) const = 0;
+	};
+
 	class IScalar1D : public IValue
 	{
 	public:
@@ -130,6 +151,15 @@ namespace values
 
 		virtual Scalar GetValue(Scalar x) const = 0;
 		virtual Scalar GetValue(const Vector& point) const = 0;
+	};
+
+	class IScalar1DTime : public IValue
+	{
+	public:
+		virtual ~IScalar1DTime() = default;
+
+		virtual Scalar GetValue(Scalar time, Scalar x) const = 0;
+		virtual Scalar GetValue(Scalar time, const Vector& point) const = 0;
 	};
 
 	class IScalar2D : public IValue
@@ -141,6 +171,15 @@ namespace values
 		virtual Scalar GetValue(const Vector& point) const = 0;
 	};
 
+	class IScalar2DTime : public IValue
+	{
+	public:
+		virtual ~IScalar2DTime() = default;
+
+		virtual Scalar GetValue(Scalar time, Scalar x, Scalar y) const = 0;
+		virtual Scalar GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
 	class IScalar3D : public IValue
 	{
 	public:
@@ -150,12 +189,29 @@ namespace values
 		virtual Scalar GetValue(const Vector& point) const = 0;
 	};
 
+	class IScalar3DTime : public IValue
+	{
+	public:
+		virtual ~IScalar3DTime() = default;
+
+		virtual Scalar GetValue(Scalar time, Scalar x, Scalar y, Scalar z) const = 0;
+		virtual Scalar GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
 	class IVector : public IValue
 	{
 	public:
 		virtual ~IVector() = default;
 
 		virtual Vector GetValue() const = 0;
+	};
+
+	class IVectorTime : public IValue
+	{
+	public:
+		virtual ~IVectorTime() = default;
+
+		virtual Vector GetValue(Scalar time) const = 0;
 	};
 
 	class IVector1D : public IValue
@@ -167,6 +223,15 @@ namespace values
 		virtual Vector GetValue(const Vector& point) const = 0;
 	};
 
+	class IVector1DTime : public IValue
+	{
+	public:
+		virtual ~IVector1DTime() = default;
+
+		virtual Vector GetValue(Scalar time, Scalar x) const = 0;
+		virtual Vector GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
 	class IVector2D : public IValue
 	{
 	public:
@@ -174,6 +239,15 @@ namespace values
 
 		virtual Vector GetValue(Scalar x, Scalar y) const = 0;
 		virtual Vector GetValue(const Vector& point) const = 0;
+	};
+
+	class IVector2DTime : public IValue
+	{
+	public:
+		virtual ~IVector2DTime() = default;
+
+		virtual Vector GetValue(Scalar time, Scalar x, Scalar y) const = 0;
+		virtual Vector GetValue(Scalar time, const Vector& point) const = 0;
 	};
 
 	class IVector3D : public IValue
@@ -185,12 +259,29 @@ namespace values
 		virtual Vector GetValue(const Vector& point) const = 0;
 	};
 
+	class IVector3DTime : public IValue
+	{
+	public:
+		virtual ~IVector3Dtime() = default;
+
+		virtual Vector GetValue(Scalar time, Scalar x, Scalar y, Scalar z) const = 0;
+		virtual Vector GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
 	class IMatrix : public IValue
 	{
 	public:
 		virtual ~IMatrix() = default;
 
 		virtual Matrix GetValue() const = 0;
+	};
+
+	class IMatrixTime : public IValue
+	{
+	public:
+		virtual ~IMatrixTime() = default;
+
+		virtual Matrix GetValue(Scalar time) const = 0;
 	};
 
 	class IMatrix1D : public IValue
@@ -202,6 +293,15 @@ namespace values
 		virtual Matrix GetValue(const Vector& point) const = 0;
 	};
 
+	class IMatrix1DTime : public IValue
+	{
+	public:
+		virtual ~IMatrix1DTime() = default;
+
+		virtual Matrix GetValue(Scalar time, Scalar x) const = 0;
+		virtual Matrix GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
 	class IMatrix2D : public IValue
 	{
 	public:
@@ -209,6 +309,15 @@ namespace values
 
 		virtual Matrix GetValue(Scalar x, Scalar y) const = 0;
 		virtual Matrix GetValue(const Vector& point) const = 0;
+	};
+
+	class IMatrix2DTime : public IValue
+	{
+	public:
+		virtual ~IMatrix2DTime() = default;
+
+		virtual Matrix GetValue(Scalar time, Scalar x, Scalar y) const = 0;
+		virtual Matrix GetValue(Scalar time, const Vector& point) const = 0;
 	};
 
 	class IMatrix3D : public IValue
@@ -220,7 +329,16 @@ namespace values
 		virtual Matrix GetValue(const Vector& point) const = 0;
 	};
 
-	using IValuePtr = std::shared_ptr<IValue>;
+	class IMatrix3DTime : public IValue
+	{
+	public:
+		virtual ~IMatrix3DTime() = default;
+
+		virtual Matrix GetValue(Scalar time, Scalar x, Scalar y, Scalar z) const = 0;
+		virtual Matrix GetValue(Scalar time, const Vector& point) const = 0;
+	};
+
+	using IValuePtr	= std::shared_ptr<IValue>;
 	using IBoolPtr = std::shared_ptr<IBool>;
 	using IStringPtr = std::shared_ptr<IString>;
 	using IScalarPtr = std::shared_ptr<IScalar>;
@@ -235,7 +353,19 @@ namespace values
 	using IMatrix1DPtr = std::shared_ptr<IMatrix1D>;
 	using IMatrix2DPtr = std::shared_ptr<IMatrix2D>;
 	using IMatrix3DPtr = std::shared_ptr<IMatrix3D>;
-
+	
+	using IScalarTimePtr = std::shared_ptr<IScalarTime>;
+	using IScalar1DTimePtr = std::shared_ptr<IScalar1DTime>;
+	using IScalar2DTimePtr = std::shared_ptr<IScalar2DTime>;
+	using IScalar3DTimePtr = std::shared_ptr<IScalar3DTime>;
+	using IVectorTimePtr = std::shared_ptr<IVectorTime>;
+	using IVector1DTimePtr = std::shared_ptr<IVector1DTime>;
+	using IVector2DTimePtr = std::shared_ptr<IVector2DTime>;
+	using IVector3DTimePtr = std::shared_ptr<IVector3DTime>;
+	using IMatrixTimePtr = std::shared_ptr<IMatrixTime>;
+	using IMatrix1DTimePtr = std::shared_ptr<IMatrix1DTime>;
+	using IMatrix2DTimePtr = std::shared_ptr<IMatrix2DTime>;
+	using IMatrix3DTimePtr = std::shared_ptr<IMatrix3DTime>;
 
 } // namespace values
 

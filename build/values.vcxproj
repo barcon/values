@@ -95,6 +95,7 @@
     <ClInclude Include="..\src\values_scalar.hpp" />
     <ClInclude Include="..\src\values_scalar_function.hpp" />
     <ClInclude Include="..\src\values_scalar_interpolation.hpp" />
+    <ClInclude Include="..\src\values_scalar_time_function.hpp" />
     <ClInclude Include="..\src\values_string.hpp" />
     <ClInclude Include="..\src\values_types.hpp" />
     <ClInclude Include="..\src\values_vector.hpp" />
