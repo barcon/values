@@ -2,7 +2,6 @@
 #define VALUES_HPP_
 
 #include "values_types.hpp"
-#include "values_base.hpp"
 #include "values_bool.hpp"
 #include "values_scalar.hpp"
 #include "values_scalar_function.hpp"
