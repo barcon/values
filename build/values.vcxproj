@@ -89,7 +89,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\src\values.hpp" />
-    <ClInclude Include="..\src\values_base.hpp" />
     <ClInclude Include="..\src\values_bool.hpp" />
     <ClInclude Include="..\src\values_matrix.hpp" />
     <ClInclude Include="..\src\values_matrix_interpolation.hpp" />
