@@ -95,8 +95,9 @@
     <ClInclude Include="..\src\values_matrix_interpolation.hpp" />
     <ClInclude Include="..\src\values_scalar.hpp" />
     <ClInclude Include="..\src\values_scalar_function.hpp" />
-    <ClInclude Include="..\src\values_scalar_interpolation.hpp" />
     <ClInclude Include="..\src\values_scalar_function_time.hpp" />
+    <ClInclude Include="..\src\values_scalar_interpolation.hpp" />
+    <ClInclude Include="..\src\values_scalar_time.hpp" />
     <ClInclude Include="..\src\values_string.hpp" />
     <ClInclude Include="..\src\values_types.hpp" />
     <ClInclude Include="..\src\values_vector.hpp" />
@@ -109,8 +110,9 @@
     <ClCompile Include="..\src\values_matrix_interpolation.cpp" />
     <ClCompile Include="..\src\values_scalar.cpp" />
     <ClCompile Include="..\src\values_scalar_function.cpp" />
-    <ClCompile Include="..\src\values_scalar_interpolation.cpp" />
     <ClCompile Include="..\src\values_scalar_function_time.cpp" />
+    <ClCompile Include="..\src\values_scalar_interpolation.cpp" />
+    <ClCompile Include="..\src\values_scalar_time.cpp" />
     <ClCompile Include="..\src\values_string.cpp" />
     <ClCompile Include="..\src\values_vector.cpp" />
     <ClCompile Include="..\src\values_vector_scalars.cpp" />

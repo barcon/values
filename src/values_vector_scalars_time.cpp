@@ -1,4 +1,5 @@
 #include "values_vector_scalars_time.hpp"
+#include "values_scalar_time.hpp"
 
 namespace values
 {
@@ -86,12 +87,23 @@ namespace values
 
         numberRows_ = numberRows;
 		scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalarTime(0.0));
+        }
     }
     void ValueVectorScalarsTime::SetScalar(Index row, IScalarTimePtr scalar)
     {
         if (row >= numberRows_)
         {
 			logger::Error(headerValues, "ValueVectorScalarsTime::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVectorScalarsTime::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -194,12 +206,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar1DTime(0.0));
+        }
     }
     void ValueVector1DScalarsTime::SetScalar(Index row, IScalar1DTimePtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector1DScalarsTime::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector1DScalarsTime::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -302,12 +325,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar2DTime(0.0));
+        }
     }
     void ValueVector2DScalarsTime::SetScalar(Index row, IScalar2DTimePtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector2DScalarsTime::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector2DScalarsTime::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -410,12 +444,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar3DTime(0.0));
+        }
     }
     void ValueVector3DScalarsTime::SetScalar(Index row, IScalar3DTimePtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector3DScalarsTime::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector3DScalarsTime::SetScalar: pointer is nullptr");
             return;
         }
 

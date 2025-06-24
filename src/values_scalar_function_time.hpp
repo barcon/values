@@ -31,7 +31,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_D function_Pointer_D_D);
 
 	protected:
-		ValueScalarFunctionTime() = default;
+		ValueScalarFunctionTime();
 
 		String name_{};
 		String key_{};
@@ -68,7 +68,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_DD function_Pointer_D_DD);
 
 	protected:
-		ValueScalar1DFunctionTime() = default;
+		ValueScalar1DFunctionTime();
 
 		String name_{};
 		String key_{};
@@ -81,6 +81,7 @@ namespace values
 	using ValueScalar2DFunctionTimePtr = std::shared_ptr<ValueScalar2DFunctionTime>;
 	using ConstValueScalar2DFunctionTimePtr = std::shared_ptr<const ValueScalar2DFunctionTime>;
 
+	ValueScalar2DFunctionTimePtr CreateValueScalar2DFunctionTime(Function_Pointer_D_DDD function_Pointer_D_DDD);
 	ValueScalar2DFunctionTimePtr CreateValueScalar2DFunctionTime(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key);
 
 	IScalar2DTimePtr CastToValueScalar2DFunctionTime(IValuePtr value);
@@ -103,7 +104,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_DDD function_Pointer_D_DDD);
 
 	protected:
-		ValueScalar2DFunctionTime() = default;
+		ValueScalar2DFunctionTime();
 
 		String name_{};
 		String key_{};
@@ -116,6 +117,7 @@ namespace values
 	using ValueScalar3DFunctionTimePtr = std::shared_ptr<ValueScalar3DFunctionTime>;
 	using ConstValueScalar3DFunctionTimePtr = std::shared_ptr< const ValueScalar3DFunctionTime >;
 
+	ValueScalar3DFunctionTimePtr CreateValueScalar3DFunctionTime(Function_Pointer_D_DDDD function_Pointer_D_DDDD);
 	ValueScalar3DFunctionTimePtr CreateValueScalar3DFunctionTime(Function_Pointer_D_DDDD function_Pointer_D_DDDD, String name, String key);
 
 	IScalar3DTimePtr CastToValueScalar3DFunctionTime(IValuePtr value);
@@ -138,7 +140,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD);
 
 	protected:
-		ValueScalar3DFunctionTime() = default;
+		ValueScalar3DFunctionTime();
 
 		String name_{};
 		String key_{};

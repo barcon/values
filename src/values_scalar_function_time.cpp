@@ -44,6 +44,13 @@ namespace values
 
         return res;
     }
+    ValueScalarFunctionTime::ValueScalarFunctionTime()
+    {
+        function_ = [](Scalar time) -> Scalar
+            { 
+                return 0.0;
+            };
+    }
     Type ValueScalarFunctionTime::GetType() const
     {
         return type_;
@@ -58,6 +65,11 @@ namespace values
     }
     Scalar ValueScalarFunctionTime::GetValue(Scalar time) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time);
     }
     void ValueScalarFunctionTime::SetName(const String& name)
@@ -70,6 +82,12 @@ namespace values
     }
     void ValueScalarFunctionTime::SetFunction(Function_Pointer_D_D function_Pointer_D_D)
     {
+        if (function_Pointer_D_D == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalarFunctionTime::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_D;
     }
 
@@ -115,6 +133,13 @@ namespace values
 
         return res;
     }
+    ValueScalar1DFunctionTime::ValueScalar1DFunctionTime()
+    {
+        function_ = [](Scalar time, Scalar x) -> Scalar
+            { 
+                return 0.0;
+			};
+    }
     Type ValueScalar1DFunctionTime::GetType() const
     {
         return type_;
@@ -129,10 +154,20 @@ namespace values
     }
     Scalar ValueScalar1DFunctionTime::GetValue(Scalar time, Scalar x) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, x);
     }
     Scalar ValueScalar1DFunctionTime::GetValue(Scalar time, const Vector& point) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, point(0));
     }
     void ValueScalar1DFunctionTime::SetName(const String& name)
@@ -145,9 +180,23 @@ namespace values
     }
     void ValueScalar1DFunctionTime::SetFunction(Function_Pointer_D_DD function_Pointer_D_DD)
     {
+        if (function_Pointer_D_DD == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar1DFunctionTime::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_DD;
     }
 
+    ValueScalar2DFunctionTimePtr CreateValueScalar2DFunctionTime(Function_Pointer_D_DDD function_Pointer_D_DDD)
+    {
+        auto res = ValueScalar2DFunctionTime::Create();
+
+        res->SetFunction(function_Pointer_D_DDD);
+
+        return res;
+    }
     ValueScalar2DFunctionTimePtr CreateValueScalar2DFunctionTime(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key)
     {
         auto res = ValueScalar2DFunctionTime::Create();
@@ -182,6 +231,13 @@ namespace values
 
         return res;
     }
+    ValueScalar2DFunctionTime::ValueScalar2DFunctionTime()
+    {
+        function_ = [](Scalar time, Scalar x, Scalar y) -> Scalar
+            { 
+                return 0.0;
+			};
+    }
     Type ValueScalar2DFunctionTime::GetType() const
     {
         return type_;
@@ -196,10 +252,20 @@ namespace values
     }
     Scalar ValueScalar2DFunctionTime::GetValue(Scalar time, Scalar x, Scalar y) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, x, y);
     }
     Scalar ValueScalar2DFunctionTime::GetValue(Scalar time, const Vector& point) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, point(0), point(1));
     }
     void ValueScalar2DFunctionTime::SetName(const String& name)
@@ -212,9 +278,23 @@ namespace values
     }
     void ValueScalar2DFunctionTime::SetFunction(Function_Pointer_D_DDD function_Pointer_D_DDD)
     {
+        if (function_Pointer_D_DDD == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar2DFunctionTime::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_DDD;
     }
 
+    ValueScalar3DFunctionTimePtr CreateValueScalar3DFunctionTime(Function_Pointer_D_DDDD function_Pointer_D_DDDD)
+    {
+        auto res = ValueScalar3DFunctionTime::Create();
+
+        res->SetFunction(function_Pointer_D_DDDD);
+
+        return res;
+    }
     ValueScalar3DFunctionTimePtr CreateValueScalar3DFunctionTime(Function_Pointer_D_DDDD function_Pointer_D_DDDD, String name, String key)
     {
         auto res = ValueScalar3DFunctionTime::Create();
@@ -249,6 +329,13 @@ namespace values
 
         return res;
     }
+    ValueScalar3DFunctionTime::ValueScalar3DFunctionTime()
+    {
+        function_ = [](Scalar time, Scalar x, Scalar y, Scalar z) -> Scalar
+            { 
+                return 0.0;
+			};
+    }
     Type ValueScalar3DFunctionTime::GetType() const
     {
         return type_;
@@ -263,10 +350,20 @@ namespace values
     }
     Scalar ValueScalar3DFunctionTime::GetValue(Scalar time, Scalar x, Scalar y, Scalar z) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, x, y, z);
     }
     Scalar ValueScalar3DFunctionTime::GetValue(Scalar time, const Vector& point) const
     {
+        if (function_ == nullptr)
+        {
+            return 0.0;
+        }
+
         return function_(time, point(0), point(1), point(2));
     }
     void ValueScalar3DFunctionTime::SetName(const String& name)
@@ -279,6 +376,12 @@ namespace values
     }
     void ValueScalar3DFunctionTime::SetFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD)
     {
+        if (function_Pointer_D_DDDD == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar3DFunctionTime::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_DDDD;
     }
 }

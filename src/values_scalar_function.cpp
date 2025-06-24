@@ -44,6 +44,13 @@ namespace values
 
         return res;
     }
+    ValueScalarFunction::ValueScalarFunction()
+    {
+        function_ = []() -> Scalar
+            {
+                return 0.0;
+            };
+    }
     Type ValueScalarFunction::GetType() const
     {
         return type_;
@@ -58,7 +65,7 @@ namespace values
     }
     Scalar ValueScalarFunction::GetValue() const
     {
-        return function_();
+         return function_();
     }
     void ValueScalarFunction::SetName(const String& name)
     {
@@ -70,6 +77,12 @@ namespace values
     }
     void ValueScalarFunction::SetFunction(Function_Pointer_D function_Pointer_D)
     {
+        if (function_Pointer_D == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalarFunction::SetFunction: pointer is nullptr" );
+            return;
+        }
+
         function_ = function_Pointer_D;
     }
 
@@ -115,6 +128,13 @@ namespace values
 
         return res;
     }
+    ValueScalar1DFunction::ValueScalar1DFunction()
+    {
+        function_ = [](Scalar x)-> Scalar
+            {
+                return 0.0;
+            };
+    }
     Type ValueScalar1DFunction::GetType() const
     {
         return type_;
@@ -145,6 +165,12 @@ namespace values
     }
     void ValueScalar1DFunction::SetFunction(Function_Pointer_D_D function_Pointer_D_D)
     {
+        if (function_Pointer_D_D == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar1DFunction::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_D;
     }
 
@@ -182,6 +208,13 @@ namespace values
 
         return res;
     }
+    ValueScalar2DFunction::ValueScalar2DFunction()
+    {
+		function_ = [](Scalar x, Scalar y) -> Scalar
+            {
+                return 0.0;
+            };
+    }
     Type ValueScalar2DFunction::GetType() const
     {
         return type_;
@@ -212,6 +245,12 @@ namespace values
     }
     void ValueScalar2DFunction::SetFunction(Function_Pointer_D_DD function_Pointer_D_DD)
     {
+        if (function_Pointer_D_DD == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar2DFunction::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_DD;
     }
 
@@ -249,6 +288,13 @@ namespace values
 
         return res;
     }
+    ValueScalar3DFunction::ValueScalar3DFunction()
+    {
+		function_ = [](Scalar x, Scalar y, Scalar z) -> Scalar
+            {
+                return 0.0;
+            };
+    }
     Type ValueScalar3DFunction::GetType() const
     {
         return type_;
@@ -279,6 +325,12 @@ namespace values
     }
     void ValueScalar3DFunction::SetFunction(Function_Pointer_D_DDD function_Pointer_D_DDD)
     {
+        if (function_Pointer_D_DDD == nullptr)
+        {
+            logger::Error(headerValues, "ValueScalar3DFunction::SetFunction: pointer is nullptr");
+            return;
+        }
+
         function_ = function_Pointer_D_DDD;
     }
 }

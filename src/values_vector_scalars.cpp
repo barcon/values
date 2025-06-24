@@ -1,4 +1,5 @@
 #include "values_vector_scalars.hpp"
+#include "values_scalar.hpp"
 
 namespace values
 {
@@ -57,11 +58,10 @@ namespace values
         return key_;
     }
     Vector ValueVectorScalars::GetValue() const
-    {
-		auto len = scalars_.size();
-		auto vec = Vector(len);
+    {;
+		auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
 			vec(i) = scalars_[i]->GetValue();
         }
@@ -86,12 +86,23 @@ namespace values
 
         numberRows_ = numberRows;
 		scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar(0.0));
+        }
     }
     void ValueVectorScalars::SetScalar(Index row, IScalarPtr scalar)
     {
         if (row >= numberRows_)
         {
 			logger::Error(headerValues, "ValueVectorScalars::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVectorScalars::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -194,12 +205,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar1D(0.0));
+        }
     }
     void ValueVector1DScalars::SetScalar(Index row, IScalar1DPtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector1DScalars::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector1DScalars::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -302,12 +324,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar2D(0.0));
+        }
     }
     void ValueVector2DScalars::SetScalar(Index row, IScalar2DPtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector2DScalars::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector2DScalars::SetScalar: pointer is nullptr");
             return;
         }
 
@@ -410,12 +443,23 @@ namespace values
 
         numberRows_ = numberRows;
         scalars_.resize(numberRows_);
+
+        for (Index i = 0; i < numberRows_; ++i)
+        {
+            SetScalar(i, CreateValueScalar3D(0.0));
+        }
     }
     void ValueVector3DScalars::SetScalar(Index row, IScalar3DPtr scalar)
     {
         if (row >= numberRows_)
         {
             logger::Error(headerValues, "ValueVector3DScalars::SetScalar: row is out of range.");
+            return;
+        }
+
+        if (scalar == nullptr)
+        {
+            logger::Error(headerValues, "ValueVector3DScalars::SetScalar: pointer is nullptr");
             return;
         }
 

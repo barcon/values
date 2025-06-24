@@ -31,7 +31,7 @@ namespace values
 		void SetFunction(Function_Pointer_D function_Pointer_D);
 
 	protected:
-		ValueScalarFunction() = default;
+		ValueScalarFunction();
 
 		String name_{};
 		String key_{};
@@ -68,7 +68,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_D function_Pointer_D_D);
 
 	protected:
-		ValueScalar1DFunction() = default;
+		ValueScalar1DFunction();
 
 		String name_{};
 		String key_{};
@@ -103,7 +103,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_DD function_Pointer_D_DD);
 
 	protected:
-		ValueScalar2DFunction() = default;
+		ValueScalar2DFunction();
 
 		String name_{};
 		String key_{};
@@ -138,7 +138,7 @@ namespace values
 		void SetFunction(Function_Pointer_D_DDD function_Pointer_D_DDD);
 
 	protected:
-		ValueScalar3DFunction() = default;
+		ValueScalar3DFunction();
 
 		String name_{};
 		String key_{};

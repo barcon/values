@@ -5,6 +5,7 @@
 #include "values_base.hpp"
 #include "values_bool.hpp"
 #include "values_scalar.hpp"
+#include "values_scalar_time.hpp"
 #include "values_scalar_function.hpp"
 #include "values_scalar_function_time.hpp"
 #include "values_scalar_interpolation.hpp"

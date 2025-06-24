@@ -297,5 +297,4 @@ namespace values
     {
         value_ = value;
     }
-
 }
