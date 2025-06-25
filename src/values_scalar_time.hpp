@@ -82,7 +82,7 @@ namespace values
 	using ConstValueScalar2DTimePtr = std::shared_ptr<const ValueScalar2DTime>;
 
 	ValueScalar2DTimePtr CreateValueScalar2DTime(Scalar value);
-	ValueScalar2DTimePtr CreateValueScalar2DTime(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key);
+	ValueScalar2DTimePtr CreateValueScalar2DTime(Scalar value, String name, String key);
 
 	IScalar2DTimePtr CastToValueScalar2DTime(IValuePtr value);
 
@@ -118,7 +118,7 @@ namespace values
 	using ConstValueScalar3DTimePtr = std::shared_ptr< const ValueScalar3DTime >;
 
 	ValueScalar3DTimePtr CreateValueScalar3DTime(Scalar value);
-	ValueScalar3DTimePtr CreateValueScalar3DTime(Function_Pointer_D_DDDD function_Pointer_D_DDDD, String name, String key);
+	ValueScalar3DTimePtr CreateValueScalar3DTime(Scalar value, String name, String key);
 
 	IScalar3DTimePtr CastToValueScalar3DTime(IValuePtr value);
 
