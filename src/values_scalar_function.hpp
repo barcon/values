@@ -9,7 +9,6 @@ namespace values
 	using ValueScalarFunctionPtr = std::shared_ptr<ValueScalarFunction>;
 	using ConstValueScalarFunctionPtr = std::shared_ptr< const ValueScalarFunction >;
 
-	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D);
 	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key);
 
 	IScalarPtr CastToValueScalarFunction(IValuePtr value);
@@ -45,7 +44,6 @@ namespace values
 	using ValueScalar1DFunctionPtr = std::shared_ptr<ValueScalar1DFunction>;
 	using ConstValueScalar1DFunctionPtr = std::shared_ptr< const ValueScalar1DFunction >;
 
-	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D);
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key);
 
 	IScalar1DPtr CastToValueScalar1DFunction(IValuePtr value);

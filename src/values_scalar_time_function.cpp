@@ -2,14 +2,6 @@
 
 namespace values 
 {
-    ValueScalarTimeFunctionPtr CreateValueScalarTimeFunction(Function_Pointer_D_D function_Pointer_D_D)
-    {
-        auto res = ValueScalarTimeFunction::Create();
-
-        res->SetFunction(function_Pointer_D_D);
-
-        return res;
-    }
     ValueScalarTimeFunctionPtr CreateValueScalarTimeFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key)
     {
         auto res = ValueScalarTimeFunction::Create();
@@ -91,14 +83,6 @@ namespace values
         function_ = function_Pointer_D_D;
     }
 
-    ValueScalar1DTimeFunctionPtr CreateValueScalar1DTimeFunction(Function_Pointer_D_DD function_Pointer_D_DD)
-    {
-        auto res = ValueScalar1DTimeFunction::Create();
-
-        res->SetFunction(function_Pointer_D_DD);
-
-        return res;
-    }
     ValueScalar1DTimeFunctionPtr CreateValueScalar1DTimeFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key)
     {
         auto res = ValueScalar1DTimeFunction::Create();
@@ -189,14 +173,6 @@ namespace values
         function_ = function_Pointer_D_DD;
     }
 
-    ValueScalar2DTimeFunctionPtr CreateValueScalar2DTimeFunction(Function_Pointer_D_DDD function_Pointer_D_DDD)
-    {
-        auto res = ValueScalar2DTimeFunction::Create();
-
-        res->SetFunction(function_Pointer_D_DDD);
-
-        return res;
-    }
     ValueScalar2DTimeFunctionPtr CreateValueScalar2DTimeFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key)
     {
         auto res = ValueScalar2DTimeFunction::Create();
@@ -287,14 +263,6 @@ namespace values
         function_ = function_Pointer_D_DDD;
     }
 
-    ValueScalar3DTimeFunctionPtr CreateValueScalar3DTimeFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD)
-    {
-        auto res = ValueScalar3DTimeFunction::Create();
-
-        res->SetFunction(function_Pointer_D_DDDD);
-
-        return res;
-    }
     ValueScalar3DTimeFunctionPtr CreateValueScalar3DTimeFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD, String name, String key)
     {
         auto res = ValueScalar3DTimeFunction::Create();

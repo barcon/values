@@ -9,7 +9,6 @@ namespace values
 	using ValueScalarTimeFunctionPtr = std::shared_ptr<ValueScalarTimeFunction>;
 	using ConstValueScalarTimeFunctionPtr = std::shared_ptr< const ValueScalarTimeFunction >;
 
-	ValueScalarTimeFunctionPtr CreateValueScalarTimeFunction(Function_Pointer_D_D function_Pointer_D_D);
 	ValueScalarTimeFunctionPtr CreateValueScalarTimeFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key);
 
 	IScalarTimePtr CastToValueScalarTimeFunction(IValuePtr value);
@@ -44,7 +43,6 @@ namespace values
 	using ValueScalar1DTimeFunctionPtr = std::shared_ptr<ValueScalar1DTimeFunction>;
 	using ConstValueScalar1DTimeFunctionPtr = std::shared_ptr< const ValueScalar1DTimeFunction >;
 
-	ValueScalar1DTimeFunctionPtr CreateValueScalar1DTimeFunction(Function_Pointer_D_DD function_Pointer_D_DD);
 	ValueScalar1DTimeFunctionPtr CreateValueScalar1DTimeFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key);
 
 	IScalar1DTimePtr CastToValueScalar1DTimeFunction(IValuePtr value);
@@ -80,7 +78,6 @@ namespace values
 	using ValueScalar2DTimeFunctionPtr = std::shared_ptr<ValueScalar2DTimeFunction>;
 	using ConstValueScalar2DTimeFunctionPtr = std::shared_ptr<const ValueScalar2DTimeFunction>;
 
-	ValueScalar2DTimeFunctionPtr CreateValueScalar2DTimeFunction(Function_Pointer_D_DDD function_Pointer_D_DDD);
 	ValueScalar2DTimeFunctionPtr CreateValueScalar2DTimeFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key);
 
 	IScalar2DTimePtr CastToValueScalar2DTimeFunction(IValuePtr value);
@@ -116,7 +113,6 @@ namespace values
 	using ValueScalar3DTimeFunctionPtr = std::shared_ptr<ValueScalar3DTimeFunction>;
 	using ConstValueScalar3DTimeFunctionPtr = std::shared_ptr< const ValueScalar3DTimeFunction >;
 
-	ValueScalar3DTimeFunctionPtr CreateValueScalar3DTimeFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD);
 	ValueScalar3DTimeFunctionPtr CreateValueScalar3DTimeFunction(Function_Pointer_D_DDDD function_Pointer_D_DDDD, String name, String key);
 
 	IScalar3DTimePtr CastToValueScalar3DTimeFunction(IValuePtr value);
