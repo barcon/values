@@ -1,5 +1,6 @@
 #include "values_scalar_time_function.hpp"
 
+
 namespace values 
 {
     ValueScalarTimeFunctionPtr CreateValueScalarTimeFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key)

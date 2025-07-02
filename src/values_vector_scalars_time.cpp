@@ -1,6 +1,8 @@
 #include "values_vector_scalars_time.hpp"
 #include "values_scalar_time.hpp"
 
+#include <cmath>
+
 namespace values
 {
     ValueVectorScalarsTimePtr CreateValueVectorScalarsTime(NumberRows numberRows)
@@ -183,7 +185,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(time, point(0));
+            vec(i) = scalars_[i]->GetValue(time, point);
         }
 
         return vec;
@@ -302,7 +304,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(time, point(0), point(1));
+            vec(i) = scalars_[i]->GetValue(time, point);
         }
 
         return vec;
@@ -421,7 +423,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(time, point(0), point(1), point(2));
+            vec(i) = scalars_[i]->GetValue(time, point);
         }
 
         return vec;
