@@ -61,10 +61,9 @@ namespace values
     }
     Vector ValueVectorScalarsTime::GetValue(Scalar time) const
     {
-		auto len = scalars_.size();
-		auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
 			vec(i) = scalars_[i]->GetValue(time);
         }
@@ -168,10 +167,9 @@ namespace values
     }
     Vector ValueVector1DScalarsTime::GetValue(Scalar time, Scalar x) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, x);
         }
@@ -180,10 +178,9 @@ namespace values
     }
     Vector ValueVector1DScalarsTime::GetValue(Scalar time, const Vector& point) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, point);
         }
@@ -287,10 +284,9 @@ namespace values
     }
     Vector ValueVector2DScalarsTime::GetValue(Scalar time, Scalar x, Scalar y) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, x, y);
         }
@@ -299,10 +295,9 @@ namespace values
     }
     Vector ValueVector2DScalarsTime::GetValue(Scalar time, const Vector& point) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, point);
         }
@@ -406,10 +401,9 @@ namespace values
     }
     Vector ValueVector3DScalarsTime::GetValue(Scalar time, Scalar x, Scalar y, Scalar z) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, x, y, z);
         }
@@ -418,10 +412,9 @@ namespace values
     }
     Vector ValueVector3DScalarsTime::GetValue(Scalar time, const Vector& point) const
     {
-        auto len = scalars_.size();
-        auto vec = Vector(len);
+        auto vec = Vector(numberRows_);
 
-        for (size_t i = 0; i < len; ++i)
+        for (Index i = 0; i < numberRows_; ++i)
         {
             vec(i) = scalars_[i]->GetValue(time, point);
         }
