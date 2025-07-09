@@ -333,6 +333,7 @@ namespace values
             return 0.0;
         }
 
+        //return 10.0 * std::cos(time);
         return function_(time, point(0), point(1), point(2));
     }
     void ValueScalar3DTimeFunction::SetName(const String& name)
