@@ -11,8 +11,7 @@ namespace values
 
 	ValueVectorPtr CreateValueVector(const Vector& value);
 	ValueVectorPtr CreateValueVector(const Vector& value, String name, String key);
-
-	IVectorPtr CastToValueVector(IValuePtr value);
+	ValueVectorPtr CastToValueVector(IValuePtr value);
 
 	class ValueVector : public IVector
 	{
@@ -46,8 +45,7 @@ namespace values
 
 	ValueVector1DPtr CreateValueVector1D(const Vector& value);
 	ValueVector1DPtr CreateValueVector1D(const Vector& value, String name, String key);
-
-	IVector1DPtr CastToValueVector1D(IValuePtr value);
+	ValueVector1DPtr CastToValueVector1D(IValuePtr value);
 
 	class ValueVector1D : public IVector1D
 	{
@@ -82,8 +80,7 @@ namespace values
 
 	ValueVector2DPtr CreateValueVector2D(const Vector& value);
 	ValueVector2DPtr CreateValueVector2D(const Vector& value, String name, String key);
-
-	IVector2DPtr CastToValueVector2D(IValuePtr value);
+	ValueVector2DPtr CastToValueVector2D(IValuePtr value);
 
 	class ValueVector2D : public IVector2D
 	{
@@ -118,8 +115,7 @@ namespace values
 
 	ValueVector3DPtr CreateValueVector3D(const Vector& value);
 	ValueVector3DPtr CreateValueVector3D(const Vector& value, String name, String key);
-
-	IVector3DPtr CastToValueVector3D(IValuePtr value);
+	ValueVector3DPtr CastToValueVector3D(IValuePtr value);
 
 	class ValueVector3D : public IVector3D
 	{

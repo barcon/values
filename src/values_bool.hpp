@@ -11,8 +11,7 @@ namespace values
 
 	ValueBoolPtr CreateValueBool(bool value);
 	ValueBoolPtr CreateValueBool(bool value, String name, String key);
-
-	IBoolPtr CastToValueBool(IValuePtr value);
+	ValueBoolPtr CastToValueBool(IValuePtr value);
 
 	class ValueBool : public IBool
 	{

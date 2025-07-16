@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IScalar3DPtr CastToValueScalar3DInterpolation(IValuePtr value)
+    ValueScalar3DInterpolationPtr CastToValueScalar3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -32,7 +32,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar3D>(value);
+        return std::dynamic_pointer_cast<ValueScalar3DInterpolation>(value);
     }
     ValueScalar3DInterpolationPtr ValueScalar3DInterpolation::Create()
     {

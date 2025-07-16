@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IScalarPtr CastToValueScalar(IValuePtr value)
+    ValueScalarPtr CastToValueScalar(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -32,7 +32,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar>(value);
+        return std::dynamic_pointer_cast<ValueScalar>(value);
     }
     ValueScalarPtr ValueScalar::ValueScalar::Create()
     {
@@ -91,7 +91,7 @@ namespace values
 
         return res;
     }
-    IScalar1DPtr CastToValueScalar1D(IValuePtr value)
+    ValueScalar1DPtr CastToValueScalar1D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -103,7 +103,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar1D>(value);
+        return std::dynamic_pointer_cast<ValueScalar1D>(value);
     }
     ValueScalar1DPtr ValueScalar1D::ValueScalar1D::Create()
     {
@@ -166,7 +166,7 @@ namespace values
 
         return res;
     }
-    IScalar2DPtr CastToValueScalar2D(IValuePtr value)
+    ValueScalar2DPtr CastToValueScalar2D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -178,7 +178,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar2D>(value);
+        return std::dynamic_pointer_cast<ValueScalar2D>(value);
     }
     ValueScalar2DPtr ValueScalar2D::ValueScalar2D::Create()
     {
@@ -241,7 +241,7 @@ namespace values
 
         return res;
     }
-    IScalar3DPtr CastToValueScalar3D(IValuePtr value)
+    ValueScalar3DPtr CastToValueScalar3D(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -253,7 +253,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar3D>(value);
+        return std::dynamic_pointer_cast<ValueScalar3D>(value);
     }
     ValueScalar3DPtr ValueScalar3D::ValueScalar3D::Create()
     {

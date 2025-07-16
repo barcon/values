@@ -10,8 +10,7 @@ namespace values
 	using ConstValueScalarFunctionPtr = std::shared_ptr< const ValueScalarFunction >;
 
 	ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key);
-
-	IScalarPtr CastToValueScalarFunction(IValuePtr value);
+	ValueScalarFunctionPtr CastToValueScalarFunction(IValuePtr value);
 
 	class ValueScalarFunction : public IScalar
 	{
@@ -45,8 +44,7 @@ namespace values
 	using ConstValueScalar1DFunctionPtr = std::shared_ptr< const ValueScalar1DFunction >;
 
 	ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key);
-
-	IScalar1DPtr CastToValueScalar1DFunction(IValuePtr value);
+	ValueScalar1DFunctionPtr CastToValueScalar1DFunction(IValuePtr value);
 
 	class ValueScalar1DFunction : public IScalar1D
 	{
@@ -80,8 +78,7 @@ namespace values
 	using ConstValueScalar2DFunctionPtr = std::shared_ptr<const ValueScalar2DFunction>;
 
 	ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key);
-
-	IScalar2DPtr CastToValueScalar2DFunction(IValuePtr value);
+	ValueScalar2DFunctionPtr CastToValueScalar2DFunction(IValuePtr value);
 
 	class ValueScalar2DFunction : public IScalar2D
 	{
@@ -115,8 +112,7 @@ namespace values
 	using ConstValueScalar3DFunctionPtr = std::shared_ptr< const ValueScalar3DFunction >;
 
 	ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key);
-
-	IScalar3DPtr CastToValueScalar3DFunction(IValuePtr value);
+	ValueScalar3DFunctionPtr CastToValueScalar3DFunction(IValuePtr value);
 
 	class ValueScalar3DFunction : public IScalar3D
 	{

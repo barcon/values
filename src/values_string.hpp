@@ -11,8 +11,7 @@ namespace values
 
 	ValueStringPtr CreateValueString(String value);
 	ValueStringPtr CreateValueString(String value, String name, String key);
-
-	IStringPtr CastToValueString(IValuePtr value);
+	ValueStringPtr CastToValueString(IValuePtr value);
 
 	class ValueString : public IString
 	{

@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IMatrix3DPtr CastToValueMatrix3DInterpolation(IValuePtr value)
+    ValueMatrix3DInterpolationPtr CastToValueMatrix3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -32,7 +32,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IMatrix3D>(value);
+        return std::dynamic_pointer_cast<ValueMatrix3DInterpolation>(value);
     }
     ValueMatrix3DInterpolationPtr ValueMatrix3DInterpolation::Create()
     {

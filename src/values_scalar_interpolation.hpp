@@ -19,8 +19,7 @@ namespace values
 
 	ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType);
 	ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType, String name, String key);
-
-	IScalar3DPtr CastToValueScalar3DInterpolation(IValuePtr value);
+	ValueScalar3DInterpolationPtr CastToValueScalar3DInterpolation(IValuePtr value);
 
 	class ValueScalar3DInterpolation : public IScalar3D
 	{

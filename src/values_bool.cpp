@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IBoolPtr CastToValueBool(IValuePtr value)
+    ValueBoolPtr CastToValueBool(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -32,7 +32,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IBool>(value);
+        return std::dynamic_pointer_cast<ValueBool>(value);
     }
     ValueBoolPtr ValueBool::ValueBool::Create()
     {

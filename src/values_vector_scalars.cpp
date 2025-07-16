@@ -21,7 +21,7 @@ namespace values
 
         return res;
     }
-    IVectorPtr CastToValueVectorScalars(IValuePtr value)
+    ValueVectorScalarsPtr CastToValueVectorScalars(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -33,7 +33,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IVector>(value);
+        return std::dynamic_pointer_cast<ValueVectorScalars>(value);
     }
     ValueVectorScalarsPtr ValueVectorScalars::ValueVectorScalars::Create()
     {
@@ -127,7 +127,7 @@ namespace values
 
         return res;
     }
-    IVector1DPtr CastToValueVector1DScalars(IValuePtr value)
+    ValueVector1DScalarsPtr CastToValueVector1DScalars(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -139,7 +139,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IVector1D>(value);
+        return std::dynamic_pointer_cast<ValueVector1DScalars>(value);
     }
     ValueVector1DScalarsPtr ValueVector1DScalars::ValueVector1DScalars::Create()
     {
@@ -246,7 +246,7 @@ namespace values
 
         return res;
     }
-    IVector2DPtr CastToValueVector2DScalars(IValuePtr value)
+    ValueVector2DScalarsPtr CastToValueVector2DScalars(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -258,7 +258,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IVector2D>(value);
+        return std::dynamic_pointer_cast<ValueVector2DScalars>(value);
     }
     ValueVector2DScalarsPtr ValueVector2DScalars::ValueVector2DScalars::Create()
     {
@@ -365,7 +365,7 @@ namespace values
 
         return res;
     }
-    IVector3DPtr CastToValueVector3DScalars(IValuePtr value)
+    ValueVector3DScalarsPtr CastToValueVector3DScalars(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -377,7 +377,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IVector3D>(value);
+        return std::dynamic_pointer_cast<ValueVector3DScalars>(value);
     }
     ValueVector3DScalarsPtr ValueVector3DScalars::ValueVector3DScalars::Create()
     {

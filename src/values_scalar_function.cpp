@@ -12,7 +12,7 @@ namespace values
 
         return res;
     }
-    IScalarPtr CastToValueScalarFunction(IValuePtr value)
+    ValueScalarFunctionPtr CastToValueScalarFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -24,7 +24,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar>(value);
+        return std::dynamic_pointer_cast<ValueScalarFunction>(value);
     }
     ValueScalarFunctionPtr ValueScalarFunction::Create()
     {
@@ -88,7 +88,7 @@ namespace values
 
         return res;
     }
-    IScalar1DPtr CastToValueScalar1DFunction(IValuePtr value)
+    ValueScalar1DFunctionPtr CastToValueScalar1DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -100,7 +100,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar1D>(value);
+        return std::dynamic_pointer_cast<ValueScalar1DFunction>(value);
     }
     ValueScalar1DFunctionPtr ValueScalar1DFunction::Create()
     {
@@ -168,7 +168,7 @@ namespace values
 
         return res;
     }
-    IScalar2DPtr CastToValueScalar2DFunction(IValuePtr value)
+    ValueScalar2DFunctionPtr CastToValueScalar2DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -180,7 +180,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar2D>(value);
+        return std::dynamic_pointer_cast<ValueScalar2DFunction>(value);
     }
     ValueScalar2DFunctionPtr ValueScalar2DFunction::Create()
     {
@@ -248,7 +248,7 @@ namespace values
 
         return res;
     }
-    IScalar3DPtr CastToValueScalar3DFunction(IValuePtr value)
+    ValueScalar3DFunctionPtr CastToValueScalar3DFunction(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -260,7 +260,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IScalar3D>(value);
+        return std::dynamic_pointer_cast<ValueScalar3DFunction>(value);
     }
     ValueScalar3DFunctionPtr ValueScalar3DFunction::Create()
     {

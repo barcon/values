@@ -20,7 +20,7 @@ namespace values
 
         return res;
     }
-    IStringPtr CastToValueString(IValuePtr value)
+    ValueStringPtr CastToValueString(IValuePtr value)
     {
         if (value == nullptr)
         {
@@ -32,7 +32,7 @@ namespace values
             return nullptr;
         }
 
-        return std::dynamic_pointer_cast<IString>(value);
+        return std::dynamic_pointer_cast<ValueString>(value);
     }
     ValueStringPtr ValueString::ValueString::Create()
     {

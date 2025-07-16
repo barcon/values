@@ -11,8 +11,7 @@ namespace values
 
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value);
 	ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key);
-
-	IMatrixPtr CastToValueMatrix(IValuePtr value);
+	ValueMatrixPtr CastToValueMatrix(IValuePtr value);
 
 	class ValueMatrix : public IMatrix
 	{
@@ -45,8 +44,7 @@ namespace values
 	using ConstValueMatrix1DPtr = std::shared_ptr< const ValueMatrix1D >;
 
 	ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value, String name, String key);
-
-	IMatrix1DPtr CastToValueMatrix1D(IValuePtr value);
+	ValueMatrix1DPtr CastToValueMatrix1D(IValuePtr value);
 
 	class ValueMatrix1D : public IMatrix1D
 	{
@@ -80,8 +78,7 @@ namespace values
 	using ConstValueMatrix2DPtr = std::shared_ptr< const ValueMatrix2D >;
 
 	ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value, String name, String key);
-
-	IMatrix2DPtr CastToValueMatrix2D(IValuePtr value);
+	ValueMatrix2DPtr CastToValueMatrix2D(IValuePtr value);
 
 	class ValueMatrix2D : public IMatrix2D
 	{
@@ -115,8 +112,7 @@ namespace values
 	using ConstValueMatrix3DPtr = std::shared_ptr< const ValueMatrix3D >;
 
 	ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value, String name, String key);
-
-	IMatrix3DPtr CastToValueMatrix3D(IValuePtr value);
+	ValueMatrix3DPtr CastToValueMatrix3D(IValuePtr value);
 
 	class ValueMatrix3D : public IMatrix3D
 	{
