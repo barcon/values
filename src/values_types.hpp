@@ -7,7 +7,6 @@
 
 #include <memory>
 #include <unordered_map>
-
 namespace values
 {
 	using Scalar = eilig::Scalar;
@@ -23,7 +22,7 @@ namespace values
 	using String = utils::String;
 	using Strings = utils::Strings;
 	using Tag = std::size_t;
-	
+
 	const String headerValues = "VALUES";
 	using Status = long long int;
 

@@ -3,6 +3,21 @@
 
 namespace values
 {
+    ValueVectorScalarsPtr CreateValueVectorScalars(const Scalars& values)
+    {
+        auto res = ValueVectorScalars::Create();
+
+        res->SetNumberRows(values.size());
+
+        Index index = 0;
+        for (auto value : values)
+        {
+            res->SetScalar(index, CreateValueScalar(value));
+            index++;
+        }
+
+        return res;
+    }
     ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows)
     {
         auto res = ValueVectorScalars::Create();
@@ -109,6 +124,21 @@ namespace values
         scalars_[row] = scalar;
     }
   
+    ValueVector1DScalarsPtr CreateValueVector1DScalars(const Scalars& values)
+    {
+        auto res = ValueVector1DScalars::Create();
+
+        res->SetNumberRows(values.size());
+
+        Index index = 0;
+        for (auto value : values)
+        {
+            res->SetScalar(index, CreateValueScalar1D(value));
+            index++;
+        }
+
+        return res;
+    }
     ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows)
     {
         auto res = ValueVector1DScalars::Create();
@@ -182,7 +212,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(point(0));
+            vec(i) = scalars_[i]->GetValue(point);
         }
 
         return vec;
@@ -228,6 +258,21 @@ namespace values
         scalars_[row] = scalar;
     }
 
+    ValueVector2DScalarsPtr CreateValueVector2DScalars(const Scalars& values)
+    {
+        auto res = ValueVector2DScalars::Create();
+
+        res->SetNumberRows(values.size());
+
+        Index index = 0;
+        for (auto value : values)
+        {
+            res->SetScalar(index, CreateValueScalar2D(value));
+            index++;
+        }
+
+        return res;
+    }
     ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows)
     {
         auto res = ValueVector2DScalars::Create();
@@ -301,7 +346,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(point(0), point(1));
+            vec(i) = scalars_[i]->GetValue(point);
         }
 
         return vec;
@@ -347,6 +392,21 @@ namespace values
         scalars_[row] = scalar;
     }
 
+    ValueVector3DScalarsPtr CreateValueVector3DScalars(const Scalars& values)
+    {
+        auto res = ValueVector3DScalars::Create();
+
+        res->SetNumberRows(values.size());
+
+		Index index = 0;
+        for (auto value : values)
+        {
+			res->SetScalar(index, CreateValueScalar3D(value));
+			index++;
+        }
+
+        return res;
+    }
     ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows)
     {
         auto res = ValueVector3DScalars::Create();
@@ -420,7 +480,7 @@ namespace values
 
         for (size_t i = 0; i < len; ++i)
         {
-            vec(i) = scalars_[i]->GetValue(point(0), point(1), point(2));
+            vec(i) = scalars_[i]->GetValue(point);
         }
 
         return vec;

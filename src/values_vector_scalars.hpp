@@ -9,6 +9,7 @@ namespace values
 	using ValueVectorScalarsPtr = std::shared_ptr<ValueVectorScalars>;
 	using ConstValueVectorScalarsPtr = std::shared_ptr< const ValueVectorScalars >;
 
+	ValueVectorScalarsPtr CreateValueVectorScalars(const Scalars& values);
 	ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows);
 	ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows, String name, String key);
 	ValueVectorScalarsPtr CastToValueVectorScalars(IValuePtr value);
@@ -46,6 +47,7 @@ namespace values
 	using ValueVector1DScalarsPtr = std::shared_ptr<ValueVector1DScalars>;
 	using ConstValueVector1DScalarsPtr = std::shared_ptr< const ValueVector1DScalars >;
 
+	ValueVector1DScalarsPtr CreateValueVector1DScalars(const Scalars& values);
 	ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows);
 	ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows, String name, String key);
 	ValueVector1DScalarsPtr CastToValueVector1DScalars(IValuePtr value);
@@ -84,6 +86,7 @@ namespace values
 	using ValueVector2DScalarsPtr = std::shared_ptr<ValueVector2DScalars>;
 	using ConstValueVector2DScalarsPtr = std::shared_ptr< const ValueVector2DScalars >;
 
+	ValueVector2DScalarsPtr CreateValueVector2DScalars(const Scalars& values);
 	ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows);
 	ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows, String name, String key);
 	ValueVector2DScalarsPtr CastToValueVector2DScalars(IValuePtr value);
@@ -122,6 +125,7 @@ namespace values
 	using ValueVector3DScalarsPtr = std::shared_ptr<ValueVector3DScalars>;
 	using ConstValueVector3DScalarsPtr = std::shared_ptr< const ValueVector3DScalars >;
 
+	ValueVector3DScalarsPtr CreateValueVector3DScalars(const Scalars& values);
 	ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows);
 	ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows, String name, String key);
 	ValueVector3DScalarsPtr CastToValueVector3DScalars(IValuePtr value);
