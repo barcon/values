@@ -3,14 +3,14 @@
 
 #include "values_types.hpp"
 
-#include "nodes.hpp"
+#include "node.hpp"
 #include "interpolation.hpp"
 
 namespace values
 {
-	using INodePtr = nodes::INodePtr;
-	using Nodes = nodes::Nodes;
-	using DofIndex = nodes::DofIndex;
+	using INodePtr = node::INodePtr;
+	using Nodes = node::Nodes;
+	using DofIndex = node::DofIndex;
 	using IInterpolationPtr = interpolation::IInterpolationPtr;
 
 	class ValueScalar3DInterpolation;

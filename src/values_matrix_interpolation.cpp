@@ -58,7 +58,7 @@ namespace values
     }
     Matrix ValueMatrix3DInterpolation::GetValue(Scalar x, Scalar y, Scalar z) const
     {
-        auto node = nodes::CreateNode();
+        auto node = node::CreateNode();
 
         node->SetPoint(x, y, z);
 
@@ -68,7 +68,7 @@ namespace values
     }
     Matrix ValueMatrix3DInterpolation::GetValue(const Vector& point) const
     {
-        auto node = nodes::CreateNode();
+        auto node = node::CreateNode();
 
         node->SetPoint(point);
 
