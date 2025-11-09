@@ -6,7 +6,9 @@
 #include "eilig.hpp"
 
 #include <memory>
+#include <functional>
 #include <unordered_map>
+
 namespace values
 {
 	using Scalar = eilig::Scalar;
@@ -81,11 +83,17 @@ namespace values
 	static const Type value_matrix3D_interpolation	= 114;
 	static const Type value_matrix3D_congruent		= 115;
 
-	using Function_Pointer_D = double (*)();
-	using Function_Pointer_D_D = double (*)(double);
-	using Function_Pointer_D_DD = double (*)(double, double);
-	using Function_Pointer_D_DDD = double (*)(double, double, double);
-	using Function_Pointer_D_DDDD = double (*)(double, double, double, double);
+	//using Function_Pointer_D = double (*)();
+	//using Function_Pointer_D_D = double (*)(double);
+	//using Function_Pointer_D_DD = double (*)(double, double);
+	//using Function_Pointer_D_DDD = double (*)(double, double, double);
+	//using Function_Pointer_D_DDDD = double (*)(double, double, double, double);
+
+	using Function_Pointer_D = std::function<Scalar()>;
+	using Function_Pointer_D_D = std::function<Scalar(Scalar)>;
+	using Function_Pointer_D_DD = std::function<Scalar(Scalar, Scalar)>;
+	using Function_Pointer_D_DDD = std::function<Scalar(Scalar, Scalar, Scalar)>;
+	using Function_Pointer_D_DDDD = std::function<Scalar(Scalar, Scalar, Scalar, Scalar)>;
 
 	class IValue
 	{
