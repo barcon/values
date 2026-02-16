@@ -18,16 +18,6 @@ namespace values
 
         return res;
     }
-    ValueMatrixPtr CreateValueMatrix(const Matrix& value, String name, String key)
-    {
-        auto res = ValueMatrix::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueMatrixPtr CastToValueMatrix(IValuePtr value)
     {
         if (value == nullptr)
@@ -89,12 +79,10 @@ namespace values
 
         return res;
     }
-    ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value, String name, String key)
+    ValueMatrix1DPtr CreateValueMatrix1D(const Matrix& value)
     {
         auto res = ValueMatrix1D::Create();
 
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;
@@ -164,12 +152,10 @@ namespace values
 
         return res;
     }
-    ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value, String name, String key)
+    ValueMatrix2DPtr CreateValueMatrix2D(const Matrix& value)
     {
         auto res = ValueMatrix2D::Create();
 
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;
@@ -239,12 +225,10 @@ namespace values
 
         return res;
     }
-    ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value, String name, String key)
+    ValueMatrix3DPtr CreateValueMatrix3D(const Matrix& value)
     {
         auto res = ValueMatrix3D::Create();
 
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;

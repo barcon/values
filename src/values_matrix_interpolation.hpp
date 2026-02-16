@@ -10,7 +10,6 @@ namespace values
 	using ConstValueMatrix3DInterpolationPtr = std::shared_ptr< const ValueMatrix3DInterpolation >;
 
 	ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType);
-	ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType, String name, String key);
 	ValueMatrix3DInterpolationPtr CastToValueMatrix3DInterpolation(IValuePtr value);
 
 	class ValueMatrix3DInterpolation : public IMatrix3D

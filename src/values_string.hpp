@@ -10,7 +10,6 @@ namespace values
 	using ConstValueStringPtr = std::shared_ptr< const ValueString >;
 
 	ValueStringPtr CreateValueString(String value);
-	ValueStringPtr CreateValueString(String value, String name, String key);
 	ValueStringPtr CastToValueString(IValuePtr value);
 
 	class ValueString : public IString

@@ -18,16 +18,6 @@ namespace values
 
         return res;
     }
-    ValueVectorPtr CreateValueVector(const Vector& value, String name, String key)
-    {
-        auto res = ValueVector::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueVectorPtr CastToValueVector(IValuePtr value)
     {
         if (value == nullptr)
@@ -93,16 +83,6 @@ namespace values
     {
         auto res = ValueVector1D::Create();
 
-        res->SetValue(value);
-
-        return res;
-    }
-    ValueVector1DPtr CreateValueVector1D(const Vector& value, String name, String key)
-    {
-        auto res = ValueVector1D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;
@@ -180,16 +160,6 @@ namespace values
 
         return res;
     }
-    ValueVector2DPtr CreateValueVector2D(const Vector& value, String name, String key)
-    {
-        auto res = ValueVector2D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueVector2DPtr CastToValueVector2D(IValuePtr value)
     {
         if (value == nullptr)
@@ -259,16 +229,6 @@ namespace values
     {
         auto res = ValueVector3D::Create();
 
-        res->SetValue(value);
-
-        return res;
-    }
-    ValueVector3DPtr CreateValueVector3D(const Vector& value, String name, String key)
-    {
-        auto res = ValueVector3D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;

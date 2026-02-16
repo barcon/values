@@ -26,16 +26,6 @@ namespace values
 
         return res;
     }
-    ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows, String name, String key)
-    {
-        auto res = ValueVectorScalars::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetNumberRows(numberRows);
-
-        return res;
-    }
     ValueVectorScalarsPtr CastToValueVectorScalars(IValuePtr value)
     {
         if (value == nullptr)
@@ -143,16 +133,6 @@ namespace values
     {
         auto res = ValueVector1DScalars::Create();
 
-        res->SetNumberRows(numberRows);
-
-        return res;
-    }
-    ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows, String name, String key)
-    {
-        auto res = ValueVector1DScalars::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetNumberRows(numberRows);
 
         return res;
@@ -281,16 +261,6 @@ namespace values
 
         return res;
     }
-    ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows, String name, String key)
-    {
-        auto res = ValueVector2DScalars::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetNumberRows(numberRows);
-
-        return res;
-    }
     ValueVector2DScalarsPtr CastToValueVector2DScalars(IValuePtr value)
     {
         if (value == nullptr)
@@ -411,16 +381,6 @@ namespace values
     {
         auto res = ValueVector3DScalars::Create();
 
-        res->SetNumberRows(numberRows);
-
-        return res;
-    }
-    ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows, String name, String key)
-    {
-        auto res = ValueVector3DScalars::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetNumberRows(numberRows);
 
         return res;

@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType, String name, String key)
-    {
-        auto res = ValueScalar3DInterpolation::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetNodes(nodes, interpolationType);
-
-        return res;
-    }
     ValueScalar3DInterpolationPtr CastToValueScalar3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)

@@ -11,7 +11,6 @@ namespace values
 
 	ValueVectorScalarsPtr CreateValueVectorScalars(const Scalars& values);
 	ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows);
-	ValueVectorScalarsPtr CreateValueVectorScalars(NumberRows numberRows, String name, String key);
 	ValueVectorScalarsPtr CastToValueVectorScalars(IValuePtr value);
 
 	class ValueVectorScalars : public IVector
@@ -49,7 +48,6 @@ namespace values
 
 	ValueVector1DScalarsPtr CreateValueVector1DScalars(const Scalars& values);
 	ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows);
-	ValueVector1DScalarsPtr CreateValueVector1DScalars(NumberRows numberRows, String name, String key);
 	ValueVector1DScalarsPtr CastToValueVector1DScalars(IValuePtr value);
 
 	class ValueVector1DScalars : public IVector1D
@@ -88,7 +86,6 @@ namespace values
 
 	ValueVector2DScalarsPtr CreateValueVector2DScalars(const Scalars& values);
 	ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows);
-	ValueVector2DScalarsPtr CreateValueVector2DScalars(NumberRows numberRows, String name, String key);
 	ValueVector2DScalarsPtr CastToValueVector2DScalars(IValuePtr value);
 
 	class ValueVector2DScalars : public IVector2D
@@ -127,7 +124,6 @@ namespace values
 
 	ValueVector3DScalarsPtr CreateValueVector3DScalars(const Scalars& values);
 	ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows);
-	ValueVector3DScalarsPtr CreateValueVector3DScalars(NumberRows numberRows, String name, String key);
 	ValueVector3DScalarsPtr CastToValueVector3DScalars(IValuePtr value);
 
 	class ValueVector3DScalars : public IVector3D

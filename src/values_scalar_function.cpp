@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueScalarFunctionPtr CreateValueScalarFunction(Function_Pointer_D function_Pointer_D, String name, String key)
-    {
-        auto res = ValueScalarFunction::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetFunction(function_Pointer_D);
-
-        return res;
-    }
     ValueScalarFunctionPtr CastToValueScalarFunction(IValuePtr value)
     {
         if (value == nullptr)
@@ -90,16 +80,6 @@ namespace values
     {
         auto res = ValueScalar1DFunction::Create();
 
-        res->SetFunction(function_Pointer_D_D);
-
-        return res;
-    }
-    ValueScalar1DFunctionPtr CreateValueScalar1DFunction(Function_Pointer_D_D function_Pointer_D_D, String name, String key)
-    {
-        auto res = ValueScalar1DFunction::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetFunction(function_Pointer_D_D);
 
         return res;
@@ -182,16 +162,6 @@ namespace values
 
         return res;
     }
-    ValueScalar2DFunctionPtr CreateValueScalar2DFunction(Function_Pointer_D_DD function_Pointer_D_DD, String name, String key)
-    {
-        auto res = ValueScalar2DFunction::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetFunction(function_Pointer_D_DD);
-
-        return res;
-    }
     ValueScalar2DFunctionPtr CastToValueScalar2DFunction(IValuePtr value)
     {
         if (value == nullptr)
@@ -266,16 +236,6 @@ namespace values
     {
         auto res = ValueScalar3DFunction::Create();
 
-        res->SetFunction(function_Pointer_D_DDD);
-
-        return res;
-    }
-    ValueScalar3DFunctionPtr CreateValueScalar3DFunction(Function_Pointer_D_DDD function_Pointer_D_DDD, String name, String key)
-    {
-        auto res = ValueScalar3DFunction::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetFunction(function_Pointer_D_DDD);
 
         return res;

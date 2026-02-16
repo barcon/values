@@ -18,7 +18,6 @@ namespace values
 	using ConstValueScalar3DInterpolationPtr = std::shared_ptr< const ValueScalar3DInterpolation >;
 
 	ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType);
-	ValueScalar3DInterpolationPtr CreateValueScalar3DInterpolation(Nodes nodes, Type interpolationType, String name, String key);
 	ValueScalar3DInterpolationPtr CastToValueScalar3DInterpolation(IValuePtr value);
 
 	class ValueScalar3DInterpolation : public IScalar3D

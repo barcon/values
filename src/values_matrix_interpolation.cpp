@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueMatrix3DInterpolationPtr CreateValueMatrix3DInterpolation(Nodes nodes, Type interpolationType, String name, String key)
-    {
-        auto res = ValueMatrix3DInterpolation::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetNodes(nodes, interpolationType);
-
-        return res;
-    }
     ValueMatrix3DInterpolationPtr CastToValueMatrix3DInterpolation(IValuePtr value)
     {
         if (value == nullptr)

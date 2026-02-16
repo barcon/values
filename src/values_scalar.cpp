@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueScalarPtr CreateValueScalar(Scalar value, String name, String key)
-    {
-        auto res = ValueScalar::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueScalarPtr CastToValueScalar(IValuePtr value)
     {
         if (value == nullptr)
@@ -77,16 +67,6 @@ namespace values
     {
         auto res = ValueScalar1D::Create();
 
-        res->SetValue(value);
-
-        return res;
-    }
-    ValueScalar1DPtr CreateValueScalar1D(Scalar value, String name, String key)
-    {
-        auto res = ValueScalar1D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;
@@ -156,16 +136,6 @@ namespace values
 
         return res;
     }
-    ValueScalar2DPtr CreateValueScalar2D(Scalar value, String name, String key)
-    {
-        auto res = ValueScalar2D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueScalar2DPtr CastToValueScalar2D(IValuePtr value)
     {
         if (value == nullptr)
@@ -227,16 +197,6 @@ namespace values
     {
         auto res = ValueScalar3D::Create();
 
-        res->SetValue(value);
-
-        return res;
-    }
-    ValueScalar3DPtr CreateValueScalar3D(Scalar value, String name, String key)
-    {
-        auto res = ValueScalar3D::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
         res->SetValue(value);
 
         return res;

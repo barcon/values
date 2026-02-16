@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueBoolPtr CreateValueBool(bool value, String name, String key)
-    {
-        auto res = ValueBool::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueBoolPtr CastToValueBool(IValuePtr value)
     {
         if (value == nullptr)

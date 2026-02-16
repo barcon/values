@@ -10,16 +10,6 @@ namespace values
 
         return res;
     }
-    ValueStringPtr CreateValueString(String value, String name, String key)
-    {
-        auto res = ValueString::Create();
-
-        res->SetName(name);
-        res->SetKey(key);
-        res->SetValue(value);
-
-        return res;
-    }
     ValueStringPtr CastToValueString(IValuePtr value)
     {
         if (value == nullptr)
